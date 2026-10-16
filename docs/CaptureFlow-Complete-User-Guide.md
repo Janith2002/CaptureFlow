@@ -1,326 +1,503 @@
-# CAPTUREFLOW
+# CaptureFlow User Guide
 
-Complete User Guide & Software Documentation
+**Record. Edit. Export.**
 
-Proposed candidate: **0.2.0-beta.1** · Documentation edition: **2026-10-16**
+Edition: 16 October 2026 · Proposed 0.2.0-beta.1 · MIT-licensed original material.
 
-No public installer is approved. Procedures describe implemented controls, not completion of every human acceptance case. No screenshots are included; diagrams are illustrative.
+This source follows the approved redesigned guide. The [publication PDF](../artifacts/release/docs/CaptureFlow-Complete-User-Guide.pdf) preserves its 17-page design and adds a build page and two genuine screenshot plates. No public installer is approved.
 
 ## Contents
 
-1. [Introduction](#introduction)
-2. [System requirements](#system-requirements)
-3. [Installation and updates](#installation-and-updates)
-4. [Main interface](#main-interface)
-5. [Six recording modes](#six-recording-modes)
-6. [Screen sources](#screen-sources)
-7. [Webcam and PiP](#webcam-and-pip)
-8. [Microphone and system audio](#microphone-and-system-audio)
-9. [Recording settings](#recording-settings)
-10. [Shortcuts and tray](#shortcuts-and-tray)
-11. [Video editing](#video-editing)
-12. [Timeline controls](#timeline-controls)
-13. [Trimming splitting and cropping](#trimming-splitting-and-cropping)
-14. [Inspector and transforms](#inspector-and-transforms)
-15. [Transitions and keyframes](#transitions-and-keyframes)
-16. [Audio editing and mixing](#audio-editing-and-mixing)
-17. [Project saving and recovery](#project-saving-and-recovery)
-18. [Media library](#media-library)
-19. [MP4 MP3 and WAV exports](#mp4-mp3-and-wav-exports)
-20. [Export progress and status](#export-progress-and-status)
-21. [Troubleshooting](#troubleshooting)
-22. [Privacy and permissions](#privacy-and-permissions)
-23. [Known limitations](#known-limitations)
-24. [Technical architecture](#technical-architecture)
-25. [Third-party components](#third-party-components)
-26. [FAQ](#faq)
-27. [Updates and support](#updates-and-support)
+1. [Start here](#start-here)
+2. [Requirements & setup](#requirements--setup)
+3. [The workspace](#the-workspace)
+4. [Recording modes & screen sources](#recording-modes--screen-sources)
+5. [Webcam & picture-in-picture](#webcam--picture-in-picture)
+6. [Audio capture & recording settings](#audio-capture--recording-settings)
+7. [Shortcuts & background behavior](#shortcuts--background-behavior)
+8. [Editor & timeline basics](#editor--timeline-basics)
+9. [Trim, split, crop & transform](#trim-split-crop--transform)
+10. [Transitions, animation & mixing](#transitions-animation--mixing)
+11. [Projects, recovery & library](#projects-recovery--library)
+12. [Export & verify](#export--verify)
+13. [Troubleshooting & privacy](#troubleshooting--privacy)
+14. [Beta status & limitations](#beta-status--limitations)
+15. [Technical reference & support](#technical-reference--support)
 
-## Introduction
+## Start here
 
-CaptureFlow is a Windows desktop application for recording screen, webcam and audio sources, editing a timeline and exporting media. Begin with generated, non-sensitive clips when evaluating the editor. Read Privacy and permissions before enabling any physical source.
+An efficient first session, without connecting a camera or microphone.
 
-The latest development regression passed **893 tests**, with zero failures/skips/blocked tests. Its clean build reported zero warnings/errors. Formal human QA remains **20 PASS / 26 Not Run** across 46 cases. Automated success does not prove physical camera operation, audible playback or installation on another computer.
+CaptureFlow is a Windows desktop workspace for screen, webcam and audio capture, timeline editing and media export. The fastest way to learn its editor is to start with non-sensitive generated media.
 
-The proposed version is a beta candidate, not an available installer. The historical unsigned 0.1.0-preview setup predates current repairs. Do not use it as the repaired build or redistribute it as a current download.
+1. Import media
 
-For a device-free first session, import generated media, add a clip, make a small edit, update the rendered preview and save a disposable project. Only then export to a separate folder and personally verify playback. Keep original source media unchanged.
+2. Add to timeline
 
-## System requirements
+3. Update preview
 
-The intended package targets **Windows 11 x64**. The installer excludes ARM64 and 32-bit Windows. Its build floor is 22000, but that is not a tested support matrix. Use a currently supported Windows 11 release compatible with .NET 10. Clean-machine and OS-version acceptance are still pending.
+4. Export & verify
 
-The planned installer is self-contained .NET 10/WPF. A separate .NET SDK or Desktop Runtime should not be required once this is verified on a clean machine. A development checkout needs the .NET 10 SDK; that is not the public installation method.
+### Your first edit
 
-FFmpeg and matching FFprobe are external dependencies. The documented paths require libx264, AAC and libmp3lame support. Hardware encoders additionally need compatible devices/drivers and a successful capability check.
+1. Open Video Editor. Choose Project > New, then import a generated video or audio clip.
 
-No measured minimum RAM, CPU, GPU or storage specification has been accepted. Leave room for source media, preview renders, intermediates, exports and retained recovery files. Larger resolutions/FPS increase workload. A webcam, microphone or output device is needed only for applicable recording modes.
+2. Build a timeline. Select media in the bin and choose Add to timeline. Make a small trim or property change.
 
-Reference: [Microsoft .NET Windows support](https://learn.microsoft.com/en-us/dotnet/core/install/windows).
+3. Review the edit. Choose Update preview to render the current timeline, then play the result.
 
-## Installation and updates
+4. Save and export. Save a disposable .cfedit project, export to a new folder and personally check the saved file.
 
-There is **no approved public installer download**. When a candidate is approved, obtain it from this repository's release assets, compare its SHA-256 with the announced checksum and verify the expected publisher/signature. A hash identifies bytes; it does not certify trust. Do not disable Windows security to run setup.
+**KEEP YOUR SOURCES**
 
-The intended per-user location is `%LOCALAPPDATA%\Programs\CaptureFlow`. Setup requests lowest privileges, offers an optional desktop shortcut and does not automatically launch CaptureFlow or download external tools. Publisher/signing decisions remain open.
+A saved project references source media; it is not a rendered video and does not embed the original files. Keep source media available at its expected location.
 
-Before updating, save projects, stop active work and close the application yourself. Preserve backups. Setup avoids forced shutdown; current upgrade/uninstall behavior still requires clean-machine testing.
+## Requirements & setup
 
-After launch, open **Settings > External tools**. Select the approved `ffmpeg.exe`, place matching `ffprobe.exe` in the same folder and choose **Validate and Save**. The absolute path is stored in local application data. Missing codecs/tool validation must be resolved before dependent operations. No automatic FFmpeg download is provided.
+What you need for a development build and a future installer.
 
-## Main interface
+- **Platform:** Windows 11 x64. The planned installer excludes ARM64 and 32-bit Windows; clean-machine acceptance is pending.
 
-Recording Studio emphasizes the monitor, compact toolbar, **Sources**, **Inspector** and optional **Mixer**. Collapse Sources or Inspector for a larger preview. **Workspace > Reset layout** restores arrangement; it is not a request to remove media.
+- **Development:** A .NET 10 SDK is required for building from source. The planned self-contained installer is not yet approved.
 
-Video Editor provides the media bin, preview monitor, Inspector and timeline. **Project** holds New, Open project, Save project and Import media. **Edit** contains clip operations. **View** controls Media bin, Inspector and Reset layout. **Monitor** offers preview update, fullscreen, mute, source audition and cropping.
+- **Media tools:** External ffmpeg.exe and matching ffprobe.exe; documented workflows require libx264, AAC and libmp3lame.
 
-Read tooltips for compact controls. Unavailable commands can reflect selection, busy state or validation. Avoid repeated clicks while an operation is running.
+- **Devices:** Webcam, microphone and output device only for recording modes that use them.
 
-Illustrative workflow, not a screenshot:
+- **Performance:** No validated minimum RAM, CPU, GPU or disk specification has been established.
 
-**Configure sources → authorized preview/recording → stop/finalize → library → edit → update preview → export → verify playback.**
+### Configure FFmpeg and FFprobe
 
-For a device-free workflow, start at **Import media** and skip all physical preview/recording. Mode selection itself can initialize a camera, so do not use camera modes as a harmless visual check.
+1. Obtain compatible external tools. Keep matching ffmpeg.exe and ffprobe.exe together in one directory.
 
-## Six recording modes
+2. Open settings. Navigate to Settings > External tools and select ffmpeg.exe.
 
-Video choices are **Screen Only**, **Webcam Only** and **Screen + Webcam**. Audio Recorder provides **Microphone Only**, **System Audio Only** and **Microphone + System Audio**.
+3. Validate. Choose Validate and Save and resolve any missing codecs or capability errors.
 
-Screen Only targets a screen, window or region. Webcam Only uses the selected camera. Screen + Webcam combines screen content and a camera overlay. Microphone Only captures an input; System Audio Only uses an output's loopback; the combined audio mode mixes both.
+**INSTALLER AVAILABILITY**
 
-Before authorized capture, remove sensitive content, obtain consent, select sources and confirm output settings/destination. Camera-mode selection can initialize a physical device. A preview is device access even if no recording file is being written.
+No approved installer is available. The historical unsigned 0.1.0-preview setup is outdated. Do not treat it as the current beta candidate. Future installers should be obtained from the official GitHub Releases page after approval.
 
-Use the available Start/Pause/Resume/Stop controls only when recording is intended. Wait for saving/finalization before closing the app or opening the output. Genuine source readiness determines availability. A clickable button alone does not prove capture works. Physical mode-by-mode playback and synchronization remain separate acceptance gates.
+### Build from source
 
-## Screen sources
+Use Windows 11 x64, Git and the .NET 10 SDK. Media operations additionally require compatible external FFmpeg and matching FFprobe.
 
-Choose **Entire Screen**, **Application Window** or **Custom Region** and confirm the intended source. Recheck after changing displays or closing a target window. Inspect messages when a source disappears; do not assume the previous selection still represents the intended content.
+```powershell
+git clone https://github.com/Janith2002/CaptureFlow.git
+cd CaptureFlow
+dotnet restore CaptureFlow.slnx
+dotnet build CaptureFlow.slnx
+dotnet test CaptureFlow.slnx --no-build
+dotnet run --project src/CaptureFlow.Desktop/CaptureFlow.Desktop.csproj
+```
 
-**Fit** shows the complete preview; **1:1** exposes source pixels with scrolling. These viewing controls do not set output resolution. Start screen preview only with authorization and a safe desktop.
+Start with generated media in Video Editor. Running the application is not permission to initialize a camera, microphone or screen preview. Device-mode selection and global recording shortcuts can activate physical sources. Save work and close a development instance yourself before rebuilding locked output files. No new test run or device acceptance is claimed by this guide.
 
-Video preferences select output resolution and frame rate. Aspect ratio is preserved and portrait sources retain orientation. A 4K output needs an appropriate source. Offered frame rates are 24, 30 and 60 FPS, but actual throughput depends on source/encoder load; overload may repeat or skip source frames.
+[Installation and external tools](INSTALLATION.md) · [Contribution guide](CONTRIBUTING.md)
 
-Use a short, disposable recording before a critical session. Inspect the saved result rather than assuming exclusions or the preview provide a complete privacy guarantee. No physical recording was performed to produce this guide.
+## The workspace
 
-## Webcam and PiP
+A clear map of Recording Studio, Video Editor and their shared controls.
 
-Select **Webcam Only** or **Screen + Webcam** only when camera access is intended. Check the selected device and reported format. Device resolution/FPS/pixel format must be supported; output scaling is separate from the capture format.
+- **Recording Studio:** Large monitor with compact toolbar, Sources, Inspector and optional Mixer. Collapse panels for a larger preview.
 
-The main Studio toolbar exposes mode-aware preview actions without requiring Inspector. Camera mode needs valid camera readiness; PiP also needs a valid screen source. Configure camera/overlay controls and inspect framing in an authorized preview before recording.
+- **Video Editor:** Media bin, rendered-preview monitor, Inspector and multitrack timeline.
 
-If Start is unavailable, read validation, check device selection, permission, initialization and, for PiP, screen source. Close competing camera applications where appropriate. Review Windows permissions yourself; do not bypass readiness checks or weaken security to make Start clickable.
+- **Project menu:** New, Open project, Save project and Import media.
 
-The toolbar repair and synthetic regressions are implemented. **Physical webcam/PiP recording, final playback and A/V synchronization are not explicitly accepted.** Report the mode, device, action and exact diagnostic if a problem returns. Synthetic tests cannot establish compatibility with a particular camera or driver.
+- **Edit / View:** Clip commands, Media bin and Inspector visibility, and Reset layout.
 
-## Microphone and system audio
+- **Monitor:** Preview update, fullscreen, mute, source audition and cropping controls.
 
-In Audio Recorder, select the mode and required microphone/output device. System audio follows the selected output's loopback; changing Windows routing can make the old selection inappropriate.
+### Understand the preview
 
-Choose **WAV** or **MP3** before starting. MP3 choices are 128, 192, 256 and 320 kbps and require compatible FFmpeg. WAV avoids MP3 encoding but still requires valid capture devices.
+The editor preview is a rendered timeline result played through WPF; it is not a realtime compositor. After changing a clip, use Update preview before judging the edit. Source audition is not the same as listening to the edited mix.
 
-Microphone and system-audio mute controls are independent. Microphone mute does not mute system audio or add a microphone to a mode that has none. Inspect levels to avoid clipping/feedback. Monitoring can expose private conversations; leave it off during configuration-only checks.
+### A typical recording-to-export path
 
-After an authorized short recording, Stop and await saving. Listen to the file to verify sources and level. For combined sources or video, use an observable event to evaluate synchronization. A moving meter does not prove the saved file contains audible sound or correct timing.
+1. Configure
 
-## Recording settings
+2. Capture
 
-Video settings include output resolution/FPS, quality preset and encoder. Quality choices are Low, Standard, High, Ultra and Custom. Custom exposes a validated bitrate and suggested values. Higher settings increase storage/processing and cannot restore detail absent from the source.
+3. Edit
 
-Use **Check available encoders** before a hardware choice. The UI explains that hardware accelerates final export after capture; a lossless intermediate requires extra storage. Explicit hardware selections require a successful check and do not silently fall back. Driver compatibility is not guaranteed by Auto mode.
+4. Export
 
-Mouse options include showing/highlighting the cursor and click animation, with colors/radius/duration. They apply to screen workflows. Use **Save quality settings** where offered and read confirmation/validation.
+DEVICE ACCESS
 
-Sources > Recording presets provides Apply, Save new, Rename and Delete preset. A preset stores configuration, not recorded media or a backup. Use a disposable preset during testing, and recheck current device selections/destination after applying one.
+Choosing a camera mode may initialize a physical device before recording begins. For a device-free walkthrough, stay in Video Editor and use generated media.
 
-## Shortcuts and tray
+### Recording Studio reference
 
-Default global bindings:
+![Genuine CaptureFlow Recording Studio QA screenshot](images/recording-studio.png)
 
-- **Ctrl+Alt+R** — Start/Stop recording.
-- **Ctrl+Alt+P** — Pause/Resume.
-- **Ctrl+Alt+M** — microphone mute.
-- **Ctrl+Alt+C** — Show/Hide CaptureFlow.
+Real M69.2 QA screenshot. Preview and recording are stopped; generic hardware labels are visible. Historical workspace view, not physical capture acceptance or proof of later toolbar repairs. Zoom in for control labels.
 
-These may act without app focus. Disable them when accidental capture is unsafe. **Settings > Keyboard shortcuts** controls enablement and assignments; choose **Save shortcuts** to apply. Conflicts/duplicates are reported, not proof of successful registration.
+## Recording modes & screen sources
 
-The tray offers Open CaptureFlow, recording controls, Open Recordings and Exit. **Settings > General > Minimize and close to system tray** must be saved. If enabled and the tray is available, closing can hide the window. Hiding does not imply recording stopped; check state and use explicit controls.
+Six implemented capture modes, with mode-specific readiness checks.
 
-Editor bindings include Ctrl+S save, Ctrl+O open, Ctrl+Z/Y undo/redo, Ctrl+C/X/V copy/cut/paste, Delete remove, S split, V select and T trim. They depend on focus and command availability; text inputs are handled separately.
+SCREEN ONLY
 
-## Video editing
+Screen / window / region
 
-For a first device-free session, open Video Editor and **Project > New**. Import a generated clip using **Import media**, select it in the bin and choose **Add to timeline**. Search imported media to find a source.
+MICROPHONE ONLY
 
-Select a timeline clip and confirm Inspector identity. Make a small change; use **Apply clip properties** where shown. Test Undo/Redo and save to a new disposable project path.
+Selected input device
 
-Choose **Update preview** to render the timeline. Playback uses a rendered file rather than realtime compositing. An edit invalidates the earlier preview. Regenerate before judging the result. **Monitor > Audition source audio** is not the edited mix.
+WEBCAM ONLY
 
-Export to a separate folder and personally play/listen to the new file. A project describes edits and references source media; it is neither a rendered video nor a portable source bundle. Preserve original files at their expected paths.
+Selected camera
 
-## Timeline controls
+SYSTEM AUDIO ONLY
 
-Use **Fit** to view the project, then zoom for precise interaction. Scroll position, clip boundaries and scale should remain aligned. Select a clip before editing its properties.
+Output loopback
 
-The monitor provides Jump to start, Previous frame, Play, Pause, Stop, Next frame and Jump to end. These operate on rendered media. WPF seeking is approximate and codec-dependent; frame buttons do not certify frame-exact visual inspection.
+SCREEN + WEBCAM
 
-Move clips with selection; use the trim interaction or edges within source bounds. Locked tracks prevent edits. Mute affects the rendered mix, not merely panel appearance. Update preview after committed changes.
+Picture-in-picture
 
-If content appears stale, check render invalidation and whether source audition is active. Do not repeatedly launch full renders while seeking. Stop playback and save before investigating persistent issues; use a disposable project for destructive-operation testing.
+MIC + SYSTEM AUDIO
 
-## Trimming splitting and cropping
+Combined audio sources
 
-Select a clip and drag its left/right edge to change the used source range. The original media remains unchanged. Inspect timeline duration and playback, then Undo if needed.
+### Choose the correct screen source
 
-Select a clip, place the playhead and use **S** with editor focus to split. Check both resulting clips/source ranges. **Edit** also exposes Cut, Copy, Paste, Ripple delete and Join clips where valid. Ripple operations can move following material; inspect downstream timing.
+For screen recording, select Entire Screen, Application Window or Custom Region. Recheck the target after display changes or when a window closes. Fit shows the whole preview; 1:1 shows source pixels and may require scrolling. Neither viewing control sets output resolution.
 
-Use **Monitor > Crop selected source**, adjust the crop and select **Apply crop**. **Cancel crop** abandons the interaction; **Clear crop** removes the selected crop. Update preview to inspect committed framing.
+### Start, pause and stop
 
-If an operation is unavailable/rejected, read its diagnostic instead of forcing values. Source bounds and edit validity remain enforced. Save a new project before experimenting, retain originals and render a separate output only after reviewing the edit.
+Check the source, output destination and capture permissions. Use Start, Pause, Resume and Stop only when recording is intended, and allow finalization to finish before opening the output. A clickable Start control is not evidence that physical capture has succeeded.
 
-## Inspector and transforms
+PERFORMANCE AND VERIFICATION
 
-Inspector presents the selected clip's properties. Expand **Audio & fades** or **Transform & text** for detailed controls. Use **Apply clip properties** to commit where shown. **Reset transform** restores transform settings.
+The UI supports 24, 30 and 60 FPS choices. Actual frame delivery depends on capture and encoder load; overload can repeat or skip frames. Physical mode-by-mode playback and synchronization remain unaccepted.
 
-Selection and displayed identity must agree. Recheck fields after changing clips. Closing/reopening Inspector is not an explicit project save. Undo/Redo operates on committed edits; save separately.
+## Webcam & picture-in-picture
 
-Transforms alter framing/position/scale/rotation/opacity where offered. Cropping and text are separate concerns. Inspect rendered results rather than trusting numeric values alone; rotation can expose transparent/black areas outside the source.
+Select the intended device, confirm its format and preview deliberately.
 
-Use a small change and Update preview, checking more than one time position. **View > Reset layout** restores panel arrangement without requesting timeline deletion. If values, selection and content disagree, stop and report a disposable reproduction.
+### Webcam Only
 
-## Transitions and keyframes
+Select the camera and inspect its reported capture format. Device resolution, frame rate and pixel format must be supported. The chosen recording output size is separate from the camera capture format.
 
-Inspector > **Transitions** includes supported fade/dissolve workflows. Select appropriate clips/settings and choose **Apply transition**; **Delete edge** removes the selected transition. Dissolve requires compatible adjacency and source handles. Invalid setups should explain why they cannot apply.
+### Screen + Webcam
 
-Inspector > **Animation** provides **Add at playhead**, **Move / update**, **Delete key** and **Reset animation**. Keys use clip-local time derived from the timeline playhead. Set two distinct keys and inspect values, markers and animation. Linear/hold interpolation is supported where offered.
+Select a valid screen source and camera, then configure the picture-in-picture layout. The main Studio toolbar exposes mode-aware preview controls; the Inspector is not required for basic preview access.
 
-Update preview after committing changes. Inspect boundaries/midpoints and Undo/Redo. Model evaluation at a requested time is not a promise of frame-exact WPF display.
+### When Start is unavailable
 
-Advanced edits can promote a project from version 1 to version 2. Older builds reject unsupported advanced projects instead of rendering them faithfully. Keep backups when sharing with older builds. Full human transition/keyframe behavior confirmation remains pending in the formal ledger.
+-  Read the actual validation message and check the selected mode.
 
-## Audio editing and mixing
+-  Confirm camera permissions, device readiness and supported format.
 
-Clip settings include gain, mute and fades. **Track mix & silence** exposes track gain/mute and silence operations. **Apply clip properties** and **Apply track mix** commit their respective changes; a slider movement may not be the final operation.
+-  For PiP, confirm the screen source is valid and still available.
 
-Use a generated tone for a safe check. Update preview, hear the unmuted mix, mute the intended clip/track, regenerate as required and confirm silence. Restore the desired state and listen again. Preview-monitor mute is different from exported track mute.
+-  Close competing camera applications where appropriate; do not bypass security or readiness checks.
 
-**Detect silence** analyzes material. Inspect the result before **Remove detected silence**; removing intervals can change timing. Test with a saved disposable project and inspect Undo behavior.
+CURRENT VERIFICATION BOUNDARY
 
-Source audition is not proof of the edited mix. Finally listen to the exported MP4/MP3/WAV for intended audio, fades and timing. Waveforms and successful decoding do not prove audibility or perceptual synchronization.
+Synthetic regression tests cover recent toolbar behavior, but physical webcam/PiP recording, final playback and A/V synchronization have not been formally accepted. Do not assume compatibility with a specific camera or driver.
 
-## Project saving and recovery
+## Audio capture & recording settings
 
-Use **Project > Save project** for a `.cfedit` project. Open project restores edit state and references, not embedded media. Moving/changing sources can prevent rendering. Keep source files and backups.
+Manage independent sources, capture quality and output settings.
 
-**Settings > Recovery & Protection** controls recording recovery and editor autosave. Save protection preferences explicitly. Autosave interval is 15–300 seconds. Metadata/snapshots use the configured recovery location; recording intermediates remain beside output in `.captureflow-work`.
+### Audio Recorder
 
-Review **Recovery available**, session states, timestamps, folders and warnings. **Recover / Restore editor** attempts recovery; **Open Folder** inspects files; **Dismiss** changes recovery workflow state. Recovery is best effort; missing/damaged data may be unrecoverable.
+Choose Microphone Only, System Audio Only or Microphone + System Audio. System audio uses loopback from the selected output device. Windows audio-routing changes may invalidate that selection.
 
-Inspect storage before confirmation-required **Clean terminal metadata**. This is not general media deletion. Finished journals can be archived, while retained media still consumes disk space. Never manually erase unfamiliar work folders during active jobs. Recovery does not replace backups or final playback checks.
+- **Audio format:** WAV or MP3. MP3 bitrate choices: 128, 192, 256 and 320 kbps.
 
-## Media library
+- **Source controls:** Independent microphone/system-audio levels and mute. A microphone mute does not silence loopback.
 
-Use the **Recordings** page to browse registered media and available open/play/edit actions. Confirm the selected filename/location; similarly named exports can be distinct files. A library entry is metadata, not a media backup.
+- **Video quality:** Low, Standard, High, Ultra and Custom; Custom validates bitrate.
 
-**Settings > Storage > Choose folder** sets the shared screen/audio destination and supports browsing existing MP4/WAV/MP3 files. **Open folder** opens it when present. Choosing a folder does not imply all old media has moved there.
+- **Frame rate:** 24, 30 and 60 FPS choices, subject to actual throughput.
 
-If an item is missing, inspect its original path and any external move before touching database data. A library notification failure can occur after a validated export exists; use the retained output path to distinguish file success from library refresh failure.
+- **Encoder:** Check available encoders before choosing hardware; explicit choices require successful capability checks.
 
-Use disposable records for testing. Do not rename/delete existing user files to create a clean test. Formal resource checks L02/L03 concern preview lifecycle measurements, not removal of library entries or disclosure of personal record identities.
+- **Cursor / presets:** Cursor visibility/highlight/click animation; Apply, Save new, Rename and Delete recording presets.
 
-## MP4 MP3 and WAV exports
+### Verify the file, not just the meter
 
-Open **Export**, select MP4 for video/optional audio or MP3/WAV for audio-only output, then review exposed format settings and destination. Audio-only output does not preserve a video stream.
+For an authorized short test, stop recording and wait for saving. Listen to the resulting file. For combined audio or video, use an observable event to assess timing. Moving meters alone do not establish audible sound or synchronization.
 
-Save the project and inspect an updated preview first. Use a fresh test folder and unique outputs; never approve replacement of existing media. The editor exporter allocates timestamp/GUID names and dedicated work directories.
+KNOW THE DIFFERENCE
 
-Wait for finalization. The backend probes/decodes output before publication, while UI completion also requires a nonempty file with matching format extension. This is stronger than a process exit, but not a substitute for personal playback/listening.
+Hardware acceleration is described for final export after capture; a lossless intermediate may require significant disk space. A preset stores configuration, not media or a backup.
 
-Record the actual completion path, size and settings. Play the new MP4 and inspect edits; listen to intended audio in MP4/MP3/WAV. Formal P03–P07 remain pending until new outputs, metadata and human playback evidence satisfy their exact criteria. A general “works” report does not replace these observations.
+## Shortcuts & background behavior
 
-## Export progress and status
+Quick actions are useful, but global shortcuts can work when the window is hidden.
 
-Status remains visible through **Preparing**, **Exporting** and **Finalizing**, showing filename/path, format and elapsed time. A reliable duration/progress fraction enables percentage; otherwise the indicator is indeterminate. Partial progress does not mean the file is ready.
+- **Ctrl + Alt + R:** Start / Stop recording
 
-**Export completed** appears only after output checks. Retained completion includes full path, byte size and Open File/Open Folder actions when available. Shell-open failure can occur even if the file remains saved.
+- **Ctrl + Alt + P:** Pause / Resume
 
-**Export failed** retains a summary and technical details. Correct the cause before **Retry**, which creates a new output. Common causes include invalid paths, missing sources, incompatible settings and external-tool errors. A brief Preparing state or process exit is not proof of success.
+- **Ctrl + Alt + M:** Microphone mute
 
-**Cancel** requests cancellation and may show Cancelling while it unwinds. Cancelled is separate from Completed; owned recovery files may remain and no completed output is confirmed. Dismiss applies to inactive status. Avoid repeated clicks; overlapping jobs are guarded.
+- **Ctrl + Alt + C:** Show / Hide CaptureFlow
 
-## Troubleshooting
+- **Ctrl + S / Ctrl + O:** Save / Open project in the editor
 
-For startup failure, preserve the exact error and diagnostic reference. The read-only export-progress binding failure was corrected and has a real-WPF regression. An old executable can retain an old defect; check the actual build.
+- **Ctrl + Z / Ctrl + Y:** Undo / Redo
 
-For disabled Start, check mode/source selection, readiness, active work and validation. Camera modes need appropriate camera state; PiP also needs a screen source. Do not bypass validation.
+- **S / V / T:** Split / Select / Trim (editor focus)
 
-For export errors, retain status, format, actual path and details. Check approved FFmpeg/FFprobe, codecs, source presence and writable destination. For stale edits use Update preview; distinguish source audition from edited playback.
+- **Delete:** Remove selected content when available
 
-For lag, stop preview and record workload, app CPU/private memory/handles/threads and system memory. High system load alone does not establish causation. Do not terminate Windows-owned media threads. For an Application Control block, retain diagnostics and contact the maintainer/administrator; do not disable controls or rename binaries to evade policy.
+### Manage shortcuts
 
-Reference: [Smart App Control](https://learn.microsoft.com/en-us/windows/apps/develop/smart-app-control/overview).
+Use Settings > Keyboard shortcuts to enable or adjust bindings, then choose Save shortcuts. Conflicts and duplicate assignments are reported; a saved setting alone does not prove successful global registration.
 
-## Privacy and permissions
+### System tray
 
-Screen capture can expose passwords, notifications and windows. Microphones can include nearby conversations; loopback can contain calls; webcams can reveal people/surroundings. Preview may access a device before recording. Obtain consent and prepare a safe scene.
+The tray offers Open CaptureFlow, recording controls, Open Recordings and Exit. Settings > General >
 
-The reviewed implementation stores media, project references, preferences, recovery metadata and library data locally, and invokes external FFmpeg/FFprobe. Source review found no application telemetry/cloud-upload implementation; this is not an independent security certification or a guarantee about Windows, third-party tools or synced destinations.
+Minimize and close to system tray controls whether closing hides the window when the tray is available.
 
-Diagnostics/metadata may contain filenames, paths, device identifiers and exception details. Redact before sharing. Prefer a synthetic reproduction instead of uploading private recordings/projects.
+BACKGROUND CAPTURE
 
-Use Windows device permissions deliberately. Access denial is a valid condition, not a reason for bypass. This guide does not authorize capture or policy changes. Review behavior of external tools and any applications opening the resulting files separately.
+Hiding the window does not necessarily stop recording. Check the recording state and use explicit Stop controls. Disable global shortcuts when accidental capture would be unsafe.
 
-## Known limitations
+## Editor & timeline basics
 
-The proposed beta is not an approved general release. No new installer is published. Publisher identity/signing, licensing and clean-machine acceptance remain gates; old preview installation evidence does not certify the repaired candidate.
+Import source media, work on the timeline and regenerate the rendered preview.
 
-Formal QA is **20 PASS / 26 Not Run**. Pending: R01–R13; E05, E06, E11, E12, E14, E15; P03–P07; L02, L03. Six Editor PASS declarations lack required behavior detail and were preserved without formal upgrades.
+Illustrative timeline structure (diagram, not an application screenshot)
 
-Physical webcam/PiP recording/playback, A/V synchronization and complete export playback evidence remain pending. User-observed lag and restricted WPF playback resource retention remain open. Previously measured Windows memory load of 92–94% does not prove cause.
+Not a CaptureFlow screenshot
 
-Latest 893 tests ran successfully under unchanged policy; historical Application Control restrictions still matter for other contexts. Preview is rendered/codec-dependent, not realtime/frame-exact. Additional themes and launch-at-sign-in are not implemented. External tools and retained intermediates require attention.
+> **VIDEO**
+> Clip A Clip B
 
-## Technical architecture
+> **AUDIO**
+> Track mix Fades / gain
 
-CaptureFlow uses .NET 10/WPF, view models and commands. Core holds domain models/contracts; Application coordinates workflows; Infrastructure provides recording, media tools and storage; Desktop owns Windows UI/lifecycle. Original CaptureFlow code is MIT-licensed; third-party components retain their own licenses.
+### Import and arrange
 
-Windows capture/camera and audio device/loopback paths feed existing recording pipelines. FFmpeg/FFprobe run externally for rendering, encoding, probing and decoding. The editor renders a project snapshot and WPF plays the resulting preview file.
+Open Video Editor, create a project and import media. Select a source in the media bin, choose Add to timeline, and use the clip selection to inspect its properties. Timeline Fit shows the project; zoom provides more precise control.
 
-Project documents retain media references; SQLite supports library data and JSON stores preferences/recovery state. Cancellation and ownership checks matter because media processing can outlive a single interaction. Final exports differ from temporary/intermediate files.
+### Preview and transport
 
-Automated tests use generated media/fakes and selected real-WPF checks without physical capture. They do not replace hardware/driver, listening, synchronization or deployment-policy verification on another machine.
+The monitor provides Jump to start, Previous frame, Play, Pause, Stop, Next frame and Jump to end. These act on rendered preview media. WPF seeking is approximate and codec-dependent, so frame buttons are not a guarantee of frame-exact visual inspection.
 
-## Third-party components
+### Edit with confidence
 
-Dependencies include .NET/WPF, Windows SDK/WinRT components, CommunityToolkit, SQLite and media packages. The project maintains notices, package provenance and copied license texts. Reconcile the actual future payload to these inventories; an inventory alone is not compliance certification.
+Locked tracks prevent edits. Track mute affects the rendered mix, not just panel appearance. After committed changes, choose Update preview; an earlier preview can be stale. Stop playback and save before investigating persistent issues.
 
-FFmpeg/FFprobe are not bundled by the current installer. FFmpeg licensing depends on build options, including optional GPL components. The locally reviewed external full build is not automatically approved for redistribution. Do not assume external invocation settles all legal questions.
+SOURCE PRESERVATION
 
-CaptureFlow's original material is licensed under MIT, approved by the owner in Milestone 78. Third-party licenses, required notices and embedded font terms remain unchanged; MIT does not relicense those components.
+Projects keep references to source files. Preserve originals, use a disposable project for destructive tests and export to a separate destination.
 
-See [third-party notice summary](THIRD-PARTY-NOTICES.md), [packaged notice inventory](../THIRD-PARTY-NOTICES.md) and [FFmpeg legal guidance](https://www.ffmpeg.org/legal.html). These distinguish component licensing from the application's unresolved license policy.
+### Video Editor reference
 
-## FAQ
+![Genuine CaptureFlow Video Editor QA screenshot](images/video-editor.png)
 
-**Why is Start disabled?** Valid mode-specific sources/readiness are required; busy jobs can lock commands. Read the validation message.
+Real M69.2 QA screenshot using synthetic color-bar media. No personal footage is shown. Historical layout, not final export playback or physical-device acceptance. Zoom in for timeline and Inspector labels.
 
-**Why is my edit invisible?** Commit properties and Update preview. Source audition is not the edited mix.
+## Trim, split, crop & transform
 
-**Where is my export?** Use its retained completion path/Open Folder. A library refresh problem is separate from saved output. Failed/cancelled is not completed.
+The essential tools for refining framing and timing.
 
-**Can I send just the project?** It references media; keep sources. It is not a bundled video.
+- **Trim:** Select a clip and drag either edge to change the used source range. Original media remains unchanged.
 
-**Does hiding stop recording?** Do not assume so. Check state and use explicit controls; global shortcuts may work while hidden.
+- **Split:** Select a clip, position the playhead and press S with editor focus. Check both resulting clips.
 
-**Can I publish the existing setup?** No: it is outdated and unapproved. A new candidate needs separate authorization.
+Ripple delete / join Available under Edit when valid; ripple operations can move later content.
 
-**Do 893 tests prove my camera works?** No. Physical device, listening, synchronization and deployment checks are separate.
+- **Crop:** Use Monitor > Crop selected source; Apply crop commits, Cancel abandons and Clear crop removes.
 
-## Updates and support
+- **Transform:** Use Inspector > Transform & text for position, scale, rotation and opacity where offered.
 
-Use [GitHub Issues](https://github.com/Janith2002/CaptureFlow/issues) for non-sensitive reports. Include actual app/build version, Windows version, mode, steps, expected/actual behavior and exact error. Redact private paths/identifiers and never post credentials or personal recordings. No private vulnerability channel is approved; avoid sensitive exploit details in public issues.
+- **Undo / redo:** Works on committed edits; it does not replace saving the project.
 
-Before critical use, select an approved candidate, check sources/permissions/destination, allow disk space and make a short authorized test. Play/listen before relying on a long recording. Save projects and preserve originals/backups.
+### Using the Inspector
 
-Export acceptance needs generated inputs, unique new outputs, stream/format/duration validation and human visible/audible playback. Performance acceptance needs the same process, exactly three preview lifecycle cycles and cleanup/settle sampling, not unrelated snapshots.
+Select a clip and confirm the Inspector shows the correct identity. Expand relevant controls and choose
 
-Future release notes must identify the actual installer, SHA-256, signer, tested Windows versions and remaining issues. This guide is proposed-beta documentation, not release approval.
+Apply clip properties where shown. Changing selection or closing the panel does not automatically save a project.
+
+### Review the result
+
+Regenerate the preview after edits, check more than one timeline position and inspect downstream timing after ripple operations. Rotation can expose empty edges beyond the source frame.
+
+SAFE EDITING
+
+If an operation is rejected, use the validation message rather than forcing values. Source bounds and edit validity are enforced.
+
+## Transitions, animation & mixing
+
+Fine-tune movement, transitions and the final audio balance.
+
+### Transitions
+
+Inspector > Transitions supports fade/dissolve workflows. Apply a transition to a valid edge; Delete edge removes it. Dissolve requires compatible adjacent clips and sufficient source handles.
+
+### Keyframes
+
+Inspector > Animation provides Add at playhead, Move / update, Delete key and Reset animation. Keyframe time is clip-local, derived from the timeline playhead. Supported interpolation includes linear and hold where offered.
+
+### Audio mix and silence analysis
+
+Clip properties include gain, mute and fades. Track mix & silence offers track gain/mute and silence detection/removal. Use Apply clip properties or Apply track mix to commit. Inspect detected intervals before removal because timing may change.
+
+For a safe test, use a generated tone. Render, listen, mute the intended track, regenerate and listen again.
+
+Preview-monitor mute and exported-track mute are different operations.
+
+COMPATIBILITY
+
+Advanced edits can upgrade a project from format version 1 to 2; older builds may reject advanced projects. Human transition/keyframe acceptance remains pending.
+
+## Projects, recovery & library
+
+Understand what is saved, what is referenced and what can be recovered.
+
+### Project files
+
+A .cfedit file stores edit state and source references, not the media itself. Use Project > Save project and keep originals accessible. Moving source files can prevent rendering.
+
+### Recovery and autosave
+
+Settings > Recovery & Protection controls recording recovery and editor autosave. Supported autosave intervals are 15–300 seconds. Recovery metadata and snapshots use the configured location; recording intermediates remain in .captureflow-work beside the output.
+
+When Recovery available appears, review session states, timestamps, folders and warnings. Recover /
+
+Restore editor attempts recovery; Open Folder inspects files; Dismiss changes the workflow state. Recovery is best effort and is not a substitute for backups.
+
+### Media library and storage
+
+The Recordings page lists registered media with available open/play/edit actions. Settings > Storage >
+
+Choose folder sets the shared recording destination. Library records are metadata, not copies of the media. A library refresh failure can occur after a valid export has already been saved.
+
+PROTECT YOUR WORK
+
+Do not erase unfamiliar work folders while jobs are active. Check the actual file path before renaming, deleting or cleaning recovery metadata.
+
+## Export & verify
+
+Produce MP4, MP3 or WAV output and confirm that it really plays.
+
+- **MP4:** Video with optional audio.
+
+- **MP3:** Compressed audio-only output.
+
+- **WAV:** Audio-only output without MP3 encoding.
+
+### Export workflow
+
+1. Prepare. Save the project and render an updated preview. Choose the format and exposed settings.
+
+2. Choose a safe destination. Use a fresh folder and unique filename; do not overwrite original media.
+
+3. Wait for finalization. Status moves through Preparing, Exporting and Finalizing. Percentage is shown only when reliable.
+
+4. Verify playback. Open the completed output and inspect video, audible audio, timing and intended edits.
+
+### Understanding status
+
+Export completed retains the full output path, byte size and Open File/Open Folder actions where available.
+
+Export failed retains details; Retry creates a new output. Cancelled is not Completed, and recovery files may remain.
+
+HUMAN PLAYBACK REQUIRED
+
+The exporter probes/decodes output and checks for a nonempty file with a matching extension. These automated checks do not replace viewing or listening to the finished result. Formal export playback acceptance remains pending.
+
+## Troubleshooting & privacy
+
+Practical diagnosis without exposing sensitive recordings or weakening security.
+
+- **Start is disabled:** Review mode, source selection, permissions, device readiness, busy state and validation message.
+
+- **Stale editor preview:** Commit properties and choose Update preview; distinguish source audition from edited playback.
+
+- **Export failure:** Check FFmpeg/FFprobe, codecs, source paths, writable destination and retained error details.
+
+- **Lag or resource growth:** Stop preview; record app CPU, private memory, handles and threads plus overall system load.
+
+- **Application Control block:** Retain the diagnostic and contact the administrator; do not disable security or rename binaries to evade policy.
+
+### Privacy and permissions
+
+Screen capture can reveal passwords and notifications. Microphones can record nearby conversations, loopback can contain calls and webcams can expose people or surroundings. Preview may initialize a device before recording. Obtain consent and select sources deliberately.
+
+Recordings, projects, recovery metadata and diagnostics are stored locally in the reviewed implementation;
+
+no application telemetry or cloud-upload implementation was found in that review. This is not an independent security certification. Paths, filenames and device identifiers may appear in diagnostics.
+
+SHARE SAFELY
+
+Use synthetic media for bug reports. Redact private paths, identifiers and credentials; never post personal recordings or security-sensitive exploit details in public GitHub Issues.
+
+## Beta status & limitations
+
+A transparent view of what is implemented and what still needs acceptance.
+
+- **Automated regression:** 893 tests passed in the latest verified development run; clean build had zero warnings/errors.
+
+- **Formal manual QA:** 20 PASS / 26 Not Run across 46 cases.
+
+- **Physical capture:** Webcam/PiP recording, final playback and A/V synchronization still require documented acceptance.
+
+- **Export playback:** Human visual/audible review and specified output evidence remain pending.
+
+- **Performance:** Lag and WPF playback resource-retention questions remain open; previous high system-memory readings alone do not prove causation.
+
+- **Deployment:** Signing/publisher decisions and clean-machine installer acceptance remain open.
+
+### Additional limitations
+
+Preview is rendered and codec-dependent rather than realtime or frame-exact. External media tools and retained intermediates require storage management. Additional themes and launch-at-sign-in are not implemented.
+
+### Release policy
+
+The proposed version is 0.2.0-beta.1, not an approved public installer. Future release notes should identify the actual installer, SHA-256 checksum, signer, tested Windows versions and remaining known issues.
+
+BEFORE RELYING ON A RELEASE
+
+Automated coverage does not prove camera compatibility, audible playback, synchronization or clean-machine installation. Do not use the outdated 0.1.0-preview installer as the repaired candidate.
+
+## Technical reference & support
+
+Architecture, third-party components and where to get help.
+
+### Application architecture
+
+- **Core:** Domain models and contracts.
+
+- **Application:** Workflow coordination.
+
+- **Infrastructure:** Capture pipelines, external media tools and storage.
+
+- **Desktop:** WPF user interface and Windows lifecycle.
+
+CaptureFlow uses .NET 10/WPF, Windows capture and camera APIs, NAudio/WASAPI, external
+
+FFmpeg/FFprobe and SQLite. The editor renders a project snapshot to a preview file; final export is a separate operation. JSON stores preferences/recovery state and SQLite supports library metadata.
+
+### Licensing
+
+Original CaptureFlow code and documentation are MIT-licensed. Third-party dependencies, font assets and external FFmpeg builds retain their own terms. FFmpeg licensing varies by build options, including GPL components; the reviewed local external build is not automatically approved for redistribution.
+
+### Help and updates
+
+For non-sensitive problems, use GitHub Issues. Include app/build version, Windows version, recording mode, steps to reproduce, expected and actual behavior, and the exact redacted error. Check the project repository for approved future release information.
+
+FINAL CHECKLIST
+
+Before an important session: confirm sources and permissions, check free disk space, make a short authorized test, play/listen to it, and keep original media and project backups.
+
+### Documentation and contribution links
+
+- [Installation](INSTALLATION.md)
+- [Known issues](KNOWN-ISSUES.md)
+- [Architecture](ARCHITECTURE.md)
+- [Contributing](CONTRIBUTING.md)
+- [Privacy and permissions](PRIVACY.md)
+- [MIT License](../LICENSE)
+- [GitHub Issues](https://github.com/Janith2002/CaptureFlow/issues)
+- [Project repository](https://github.com/Janith2002/CaptureFlow)
