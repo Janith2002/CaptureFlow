@@ -281,7 +281,7 @@ Latest 893 tests ran successfully under unchanged policy; historical Application
 
 ## Technical architecture
 
-CaptureFlow uses .NET 10/WPF, view models and commands. Core holds domain models/contracts; Application coordinates workflows; Infrastructure provides recording, media tools and storage; Desktop owns Windows UI/lifecycle. This description does not grant application-source distribution rights.
+CaptureFlow uses .NET 10/WPF, view models and commands. Core holds domain models/contracts; Application coordinates workflows; Infrastructure provides recording, media tools and storage; Desktop owns Windows UI/lifecycle. Original CaptureFlow code is MIT-licensed; third-party components retain their own licenses.
 
 Windows capture/camera and audio device/loopback paths feed existing recording pipelines. FFmpeg/FFprobe run externally for rendering, encoding, probing and decoding. The editor renders a project snapshot and WPF plays the resulting preview file.
 
@@ -295,7 +295,7 @@ Dependencies include .NET/WPF, Windows SDK/WinRT components, CommunityToolkit, S
 
 FFmpeg/FFprobe are not bundled by the current installer. FFmpeg licensing depends on build options, including optional GPL components. The locally reviewed external full build is not automatically approved for redistribution. Do not assume external invocation settles all legal questions.
 
-Product publisher identity, application terms/license and redistribution decisions remain owner approvals. Documentation publication does not grant an open-source license or remove third-party rights.
+CaptureFlow's original material is licensed under MIT, approved by the owner in Milestone 78. Third-party licenses, required notices and embedded font terms remain unchanged; MIT does not relicense those components.
 
 See [third-party notice summary](THIRD-PARTY-NOTICES.md), [packaged notice inventory](../THIRD-PARTY-NOTICES.md) and [FFmpeg legal guidance](https://www.ffmpeg.org/legal.html). These distinguish component licensing from the application's unresolved license policy.
 

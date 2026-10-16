@@ -1,0 +1,20 @@
+CaptureFlow 0.1.0 Preview
+
+Private pre-release evaluation build. Public release approval is BLOCKED.
+The application and installer are unsigned. Windows may display reputation warnings.
+
+Close CaptureFlow before installing, upgrading or uninstalling. Setup does not
+force recording sessions to stop or automatically launch recording devices.
+
+This package includes the .NET runtime. Visual Studio and a separately installed
+.NET SDK are not required. FFmpeg and FFprobe are NOT bundled. For video, MP3
+and editor exports, install an approved external pair and configure its ffmpeg.exe
+path in Settings > External Tools. WAV recording remains available without FFmpeg.
+
+User settings, SQLite, recovery data and autosaves are stored separately under
+LocalAppData\CaptureFlow. Recordings and editor projects stay in user-selected
+locations. Installation, upgrade and uninstall do not remove these user files.
+
+Perceptual audio/video synchronization remains pending manual verification.
+Clean Windows validation and complete distribution compliance remain pending.
+Third-party notice files are included; complete legal compliance is not claimed.

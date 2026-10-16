@@ -1,0 +1,12 @@
+<Window x:Class="CaptureFlow.Desktop.Views.RegionSelectionWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Icon="pack://application:,,,/CaptureFlow.Desktop;component/Assets/Branding/CaptureFlow-New-Icon.ico" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="#650B0E18" ShowInTaskbar="False" Topmost="True" Title="CaptureFlow region selection" Foreground="#F3F5FF" FontFamily="Segoe UI">
+<Grid>
+<Canvas x:Name="Surface" Background="Transparent" MouseLeftButtonDown="BeginSelection" MouseMove="MoveSelection" MouseLeftButtonUp="EndSelection">
+<Border x:Name="Selection" BorderBrush="#A9A0FF" BorderThickness="2" Background="#205E61D8" Visibility="Collapsed"/>
+<Thumb x:Name="ResizeHandle" Width="18" Height="18" Background="#A9A0FF" Cursor="SizeNWSE" Visibility="Collapsed" DragDelta="ResizeSelection"/>
+</Canvas>
+<Border HorizontalAlignment="Center" VerticalAlignment="Top" Background="#F51B2232" CornerRadius="14" BorderBrush="#7775FF" BorderThickness="1" Padding="18" Margin="16,16,16,0">
+<StackPanel><TextBlock Text="CaptureFlow · Select recording region" FontSize="18" FontWeight="SemiBold"/><TextBlock Text="Drag to select. Drag inside to move; use the corner handle to resize." Foreground="#A7B0C5" Margin="0,8,0,8"/>
+<TextBlock x:Name="Dimensions" Text="No region selected" FontFamily="Consolas" Margin="0,0,0,12"/>
+<WrapPanel><Button x:Name="ConfirmButton" Content="Confirm" IsEnabled="False" Click="Confirm" Padding="16,8" Margin="0,0,10,0"/><Button Content="Reset" Click="Reset" Padding="16,8" Margin="0,0,10,0"/><Button Content="Cancel" Click="Cancel" Padding="16,8"/></WrapPanel>
+</StackPanel></Border>
+</Grid></Window>

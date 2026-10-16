@@ -23,3 +23,19 @@ Before updating, save projects, stop active work and close the application yours
 After launch, open **Settings > External tools**. Select the approved `ffmpeg.exe`, place matching `ffprobe.exe` in the same folder and choose **Validate and Save**. The absolute path is stored in local application data. Missing codecs/tool validation must be resolved before dependent operations. No automatic FFmpeg download is provided.
 
 See the [complete guide](CaptureFlow-Complete-User-Guide.md).
+
+
+## Build from source
+
+Clone the complete source repository to build the application. Use Windows with the .NET 10 SDK and compatible external FFmpeg/FFprobe for media operations.
+
+```powershell
+git clone https://github.com/Janith2002/CaptureFlow.git
+cd CaptureFlow
+dotnet restore CaptureFlow.slnx
+dotnet build CaptureFlow.slnx
+dotnet test CaptureFlow.slnx --no-build
+dotnet run --project src/CaptureFlow.Desktop/CaptureFlow.Desktop.csproj
+```
+
+Do not run a build against locked output files; save and close a running development instance yourself if necessary. No physical preview/recording is required to launch or run deterministic tests. See [architecture](ARCHITECTURE.md) and [license status](SOURCE-CODE-POLICY.md).

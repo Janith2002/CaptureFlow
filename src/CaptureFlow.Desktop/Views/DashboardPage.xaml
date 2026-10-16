@@ -1,0 +1,20 @@
+<UserControl x:Class="CaptureFlow.Desktop.Views.DashboardPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<StackPanel>
+    <WrapPanel x:Name="QuickActions" Margin="0,0,0,16">
+        <Border Style="{StaticResource Card}" Width="{Binding ActualWidth, ElementName=QuickActions, Converter={StaticResource CardWidthConverter}}" Margin="0,0,16,12"><StackPanel><TextBlock Text="Screen recording" Style="{StaticResource Heading}" Margin="0,0,0,8"/><TextBlock Text="Record a monitor, webcam, or both with optional audio." Style="{StaticResource MutedText}" Margin="0,0,0,16"/><Button Content="Open Screen Recorder →" Style="{StaticResource PrimaryButton}" Command="{Binding NavigateCommand}" CommandParameter="Screen Recorder"/></StackPanel></Border>
+        <Border Style="{StaticResource Card}" Width="{Binding ActualWidth, ElementName=QuickActions, Converter={StaticResource CardWidthConverter}}" Margin="0,0,0,12"><StackPanel><TextBlock Text="Audio recording" Style="{StaticResource Heading}" Margin="0,0,0,8"/><TextBlock Text="Set up microphone, system audio or both. No video required." Style="{StaticResource MutedText}" Margin="0,0,0,16"/><Button Content="Open Audio Recorder →" Command="{Binding NavigateCommand}" CommandParameter="Audio Recorder" BorderBrush="#29CBDF"/></StackPanel></Border>
+    </WrapPanel>
+    <Border Style="{StaticResource Card}" Margin="0,0,0,16"><StackPanel><StackPanel Orientation="Horizontal"><Ellipse Width="8" Height="8" Fill="#29CBDF" Margin="0,0,8,0"/><TextBlock Text="{Binding Audio.StatusLabel}" Foreground="#29CBDF"/></StackPanel><TextBlock Text="Screen, application window, region and webcam recording export MP4. Audio Recorder supports WAV and MP3." Style="{StaticResource MutedText}" FontSize="12" Margin="0,6,0,0"/></StackPanel></Border>
+    <Border Style="{StaticResource Card}" Margin="0,0,0,16"><StackPanel><DockPanel Margin="0,0,0,12"><Button DockPanel.Dock="Right" Content="View library →" Command="{Binding NavigateCommand}" CommandParameter="Recordings"/><TextBlock Text="Recent recordings" Style="{StaticResource Heading}" Margin="0" VerticalAlignment="Center"/></DockPanel>
+        <Border Background="#111823" CornerRadius="8" Padding="16" Visibility="{Binding HasNoRecordings, Converter={StaticResource BoolVisibility}}"><StackPanel><TextBlock Text="Your recordings will appear here" FontWeight="SemiBold"/><TextBlock Text="No files in the selected folder. You can browse existing MP4, WAV and MP3 recordings in the library." Style="{StaticResource MutedText}" Margin="0,6,0,0"/></StackPanel></Border>
+        <ItemsControl ItemsSource="{Binding RecentRecordings}"><ItemsControl.ItemTemplate><DataTemplate><Border BorderBrush="#354057" BorderThickness="0,0,0,1" Padding="0,10"><DockPanel><TextBlock DockPanel.Dock="Right" Text="{Binding Format}" Foreground="#29CBDF" Margin="12,0,0,0"/><StackPanel><TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis"/><TextBlock Text="{Binding Date}" Foreground="{StaticResource Muted}" FontSize="12" Margin="0,4,0,0"/></StackPanel></DockPanel></Border></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+    </StackPanel></Border>
+    <Border Style="{StaticResource Card}"><StackPanel><DockPanel><Button DockPanel.Dock="Right" Content="Manage storage →" Command="{Binding ManageStorageCommand}"/><TextBlock Text="Storage location" Style="{StaticResource Heading}" Margin="0" VerticalAlignment="Center"/></DockPanel><TextBlock Text="{Binding OutputFolder}" Style="{StaticResource MutedText}" Margin="0,10,0,0"/><TextBlock Text="Shared by screen and audio workflows" Foreground="{StaticResource Muted}" FontSize="12" Margin="0,4,0,0"/></StackPanel></Border>
+</StackPanel>
+</UserControl>
+
+
+
+
+
+

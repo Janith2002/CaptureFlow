@@ -1,0 +1,19 @@
+<Window x:Class="CaptureFlow.Desktop.Views.FloatingToolbarWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Icon="pack://application:,,,/CaptureFlow.Desktop;component/Assets/Branding/CaptureFlow-New-Icon.ico" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" Width="410" Height="152" ShowInTaskbar="False" ShowActivated="False" Title="CaptureFlow recording toolbar" FontFamily="Segoe UI" Foreground="#F3F5FF">
+<Border Background="#F51B2232" CornerRadius="14" BorderBrush="#46516B" BorderThickness="1" Padding="12">
+<StackPanel>
+<DockPanel>
+<Button DockPanel.Dock="Right" Content="×" Click="HideClicked" Padding="8,2" Margin="4,0,0,0" ToolTip="Hide toolbar; recording continues" AutomationProperties.Name="Hide recording toolbar"/>
+<Button DockPanel.Dock="Right" Content="− / +" Command="{Binding CollapseCommand}" Padding="8,2" Margin="4,0,0,0" ToolTip="Collapse or expand" AutomationProperties.Name="Collapse recording toolbar"/>
+<Border MouseLeftButtonDown="Drag" Cursor="SizeAll"><StackPanel Orientation="Horizontal">
+<Image Source="{StaticResource CaptureFlowLogo}" Width="26" Height="26" Stretch="Uniform" Margin="0,0,8,0"/>
+<StackPanel><TextBlock Text="{Binding Status}" FontSize="12"/><TextBlock Text="{Binding Elapsed}" FontSize="18" FontWeight="SemiBold" FontFamily="Consolas"/></StackPanel>
+</StackPanel></Border>
+</DockPanel>
+<StackPanel x:Name="Controls" Margin="0,10,0,0"><WrapPanel>
+<Button Content="{Binding PauseText}" Command="{Binding PauseResumeCommand}" IsEnabled="{Binding CanPause}" Padding="10,6" Margin="0,0,6,0" AutomationProperties.Name="Toolbar pause or resume"/>
+<Button Content="{Binding StopText}" Command="{Binding StopCommand}" IsEnabled="{Binding CanStop}" Padding="10,6" Margin="0,0,6,0" AutomationProperties.Name="Toolbar stop or cancel"/>
+<Button Content="{Binding MuteText}" Command="{Binding ToggleMicrophoneCommand}" IsEnabled="{Binding CanMute}" Padding="10,6" Margin="0,0,6,0" AutomationProperties.Name="Toolbar microphone mute"/>
+<Button Content="Open" Command="{Binding OpenMainCommand}" Padding="10,6" AutomationProperties.Name="Open CaptureFlow"/>
+</WrapPanel><TextBlock Text="{Binding CaptureNotice}" ToolTip="{Binding CaptureNotice}" Foreground="#F4BF83" FontSize="10" TextTrimming="CharacterEllipsis" Margin="0,8,0,0"/></StackPanel>
+</StackPanel></Border>
+</Window>

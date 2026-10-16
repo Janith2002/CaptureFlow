@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:views="clr-namespace:CaptureFlow.Desktop.Views" x:Class="CaptureFlow.Desktop.MainWindow" Title="CaptureFlow" Icon="pack://application:,,,/CaptureFlow.Desktop;component/Assets/Branding/CaptureFlow-New-Icon.ico" Width="1440" Height="900" MinHeight="480" WindowStartupLocation="CenterScreen" Background="{StaticResource CanvasBrush}" Foreground="#F3F5FF" FontFamily="Segoe UI" FontSize="14" UseLayoutRounding="True">
+  <Window.Style>
+    <Style TargetType="Window">
+      <Setter Property="MinWidth" Value="760"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding IsEditor}" Value="True">
+          <Setter Property="MinWidth" Value="760"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+  </Window.Style>
+  <Grid Background="{StaticResource CanvasBrush}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="68"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Border Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource BoundaryBrush}" BorderThickness="0,0,1,0" Padding="10,16">
+      <DockPanel>
+        <Image DockPanel.Dock="Top" Source="{StaticResource CaptureFlowLogo}" Width="38" Height="38" Stretch="Uniform" Margin="0,0,0,26" ToolTip="CaptureFlow" AutomationProperties.Name="CaptureFlow logo"/>
+        <StackPanel>
+          <RadioButton GroupName="Navigation" Style="{StaticResource NavigationRailItem}" IsChecked="{Binding SelectedPage, Converter={StaticResource NavigationConverter}, ConverterParameter='Dashboard'}" ToolTip="Dashboard" AutomationProperties.Name="Dashboard">
+            <TextBlock Text="" FontFamily="Segoe Fluent Icons" FontSize="19"/>
+          </RadioButton>
+          <RadioButton GroupName="Navigation" Style="{StaticResource NavigationRailItem}" IsChecked="{Binding SelectedPage, Converter={StaticResource NavigationConverter}, ConverterParameter='Screen Recorder'}" ToolTip="Recording Studio" AutomationProperties.Name="Recording Studio">
+            <TextBlock Text="" FontFamily="Segoe Fluent Icons" FontSize="19"/>
+          </RadioButton>
+          <RadioButton GroupName="Navigation" Style="{StaticResource NavigationRailItem}" IsChecked="{Binding SelectedPage, Converter={StaticResource NavigationConverter}, ConverterParameter='Audio Recorder'}" ToolTip="Audio Recorder" AutomationProperties.Name="Audio Recorder">
+            <TextBlock Text="" FontFamily="Segoe Fluent Icons" FontSize="19"/>
+          </RadioButton>
+          <RadioButton GroupName="Navigation" Style="{StaticResource NavigationRailItem}" IsChecked="{Binding SelectedPage, Converter={StaticResource NavigationConverter}, ConverterParameter='Recordings'}" ToolTip="Recordings Library" AutomationProperties.Name="Recordings Library">
+            <TextBlock Text="" FontFamily="Segoe Fluent Icons" FontSize="19"/>
+          </RadioButton>
+          <RadioButton GroupName="Navigation" Style="{StaticResource NavigationRailItem}" IsChecked="{Binding SelectedPage, Converter={StaticResource NavigationConverter}, ConverterParameter='Video &amp; Audio Editor'}" ToolTip="Video Editor" AutomationProperties.Name="Video Editor">
+            <TextBlock Text="" FontFamily="Segoe Fluent Icons" FontSize="19"/>
+          </RadioButton>
+          <RadioButton GroupName="Navigation" Style="{StaticResource NavigationRailItem}" IsChecked="{Binding SelectedPage, Converter={StaticResource NavigationConverter}, ConverterParameter='Settings'}" ToolTip="Settings" AutomationProperties.Name="Settings">
+            <TextBlock Text="" FontFamily="Segoe Fluent Icons" FontSize="19"/>
+          </RadioButton>
+        </StackPanel>
+      </DockPanel>
+    </Border>
+    <Grid Grid.Column="1" Margin="16,10,16,12">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <DockPanel Margin="0,0,0,10">
+        <TextBlock Text="{Binding WorkspaceTitle}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"/>
+        <Button Content="Recovery available" Command="{Binding ShowRecoveryCommand}" Visibility="{Binding Recovery.Available, Converter={StaticResource BoolVisibility}}" HorizontalAlignment="Right" ToolTip="Review retained sessions"/>
+      </DockPanel>
+      <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="0,0,8,0">
+        <ScrollViewer.Style>
+          <Style TargetType="ScrollViewer">
+            <Style.Triggers>
+              <DataTrigger Binding="{Binding IsEditor}" Value="True">
+                <Setter Property="Visibility" Value="Collapsed"/>
+              </DataTrigger>
+              <DataTrigger Binding="{Binding IsScreenRecorder}" Value="True">
+                <Setter Property="Visibility" Value="Collapsed"/>
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </ScrollViewer.Style>
+        <Grid Background="{StaticResource CanvasBrush}">
+          <views:DashboardPage Visibility="{Binding IsDashboard, Converter={StaticResource BoolVisibility}}"/>
+          <views:AudioRecorderPage Visibility="{Binding IsAudioRecorder, Converter={StaticResource BoolVisibility}}"/>
+          <StackPanel Visibility="{Binding IsRecordings, Converter={StaticResource BoolVisibility}}">
+            <Border Style="{StaticResource Card}" Margin="0,0,0,16">
+              <views:StoragePreferences/>
+            </Border>
+            <Border Style="{StaticResource Card}">
+              <views:RecordingsLibrary/>
+            </Border>
+          </StackPanel>
+          <views:SettingsPage Visibility="{Binding IsSettings, Converter={StaticResource BoolVisibility}}"/>
+        </Grid>
+      </ScrollViewer>
+      <views:ScreenRecorderPage Grid.Row="1" Visibility="{Binding IsScreenRecorder, Converter={StaticResource BoolVisibility}}"/>
+      <views:EditorPage Grid.Row="1" DataContext="{Binding Editor}" Visibility="{Binding DataContext.IsEditor, RelativeSource={RelativeSource AncestorType=Window}, Converter={StaticResource BoolVisibility}}"/>
+    </Grid>
+  </Grid>
+</Window>

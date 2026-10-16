@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CaptureFlow.Application\CaptureFlow.Application.csproj" />
+    <ProjectReference Include="..\CaptureFlow.Infrastructure\CaptureFlow.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CaptureFlow.Desktop.EntryPoint</StartupObject>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\..\assets\branding\CaptureFlow-New-Icon.ico</ApplicationIcon>
+    <Product>CaptureFlow</Product>
+    <AssemblyTitle>CaptureFlow</AssemblyTitle>
+    <Description>CaptureFlow recording and editing application</Description>
+    <!-- Supply a verified legal identity at release time; never use the SDK's assembly-name default. -->
+    <GenerateAssemblyCompanyAttribute Condition="'$(CaptureFlowPublisher)' == ''">false</GenerateAssemblyCompanyAttribute>
+    <Company Condition="'$(CaptureFlowPublisher)' != ''">$(CaptureFlowPublisher)</Company>
+    <GenerateAssemblyCompanyAttribute Condition="'$(CaptureFlowPublisher)' != ''">true</GenerateAssemblyCompanyAttribute>
+  </PropertyGroup>
+
+  <ItemGroup><Resource Include="Assets\CaptureFlow.ico"/><Resource Include="Assets\CaptureFlow.png"/></ItemGroup>
+  <ItemGroup><Resource Include="..\..\assets\branding\CaptureFlow-New-Icon.ico" Link="Assets\Branding\CaptureFlow-New-Icon.ico"/><Resource Include="..\..\assets\branding\CaptureFlow-New-Logo.png" Link="Assets\Branding\CaptureFlow-New-Logo.png"/></ItemGroup>
+  <ItemGroup><Content Include="..\..\THIRD-PARTY-NOTICES.md" Link="THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
+  <ItemGroup><Content Include="..\..\Licenses\**\*" Link="Licenses\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
+</Project>
+

@@ -1,0 +1,17 @@
+<UserControl x:Class="CaptureFlow.Desktop.Views.AudioRecordingPreferences" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<StackPanel>
+    <TextBlock Text="Audio-only setup" Style="{StaticResource Heading}"/>
+    <TextBlock Text="Countdown" Style="{StaticResource Label}"/><ComboBox IsEnabled="{Binding CanEditPreferences}" ItemsSource="{Binding CountdownOptions}" SelectedItem="{Binding SelectedCountdown}" AutomationProperties.Name="Audio countdown preference"/>
+    <Button Content="Cancel countdown" Command="{Binding CancelCountdownCommand}" Visibility="{Binding IsCountingDown, Converter={StaticResource BoolVisibility}}" Margin="0,10,0,0"/>
+    <TextBlock Text="Audio source mode" Style="{StaticResource Label}" Margin="0,0,0,6"/>
+    <ComboBox IsEnabled="{Binding CanEditPreferences}" ItemsSource="{Binding ModeOptions}" SelectedItem="{Binding SelectedMode}" AutomationProperties.Name="Audio recording mode" ToolTip="Record a microphone, a Windows playback device, or both mixed together."/>
+    <TextBlock Text="Output format" Style="{StaticResource Label}"/>
+    <ComboBox IsEnabled="{Binding CanEditPreferences}" ItemsSource="{Binding FormatOptions}" SelectedItem="{Binding SelectedFormat}" AutomationProperties.Name="Audio format" ToolTip="Lossless 16-bit PCM WAV or MP3. Microphone Only is mono; system and combined recording are stereo."/>
+    <StackPanel Visibility="{Binding IsMp3, Converter={StaticResource BoolVisibility}}" IsEnabled="{Binding CanEditPreferences}"><TextBlock Text="MP3 bitrate (kbps)" Style="{StaticResource Label}"/><ComboBox ItemsSource="{Binding Mp3BitrateOptions}" SelectedItem="{Binding SelectedMp3Bitrate}" AutomationProperties.Name="MP3 bitrate"/><TextBlock Text="FFmpeg executable" Style="{StaticResource Label}"/><TextBox Text="{Binding FfmpegPath, UpdateSourceTrigger=PropertyChanged}" AutomationProperties.Name="Audio export FFmpeg executable"/></StackPanel>
+    <TextBlock Text="Audio quality" Style="{StaticResource Label}"/>
+    <ComboBox IsEnabled="{Binding CanEditPreferences}" ItemsSource="{Binding QualityOptions}" SelectedItem="{Binding SelectedQuality}" AutomationProperties.Name="Audio quality preference" ToolTip="High quality: 48 kHz; Balanced: 44.1 kHz; Smaller file: 16 kHz. Capture uses 16-bit PCM. MP3 export uses 48 kHz at the selected bitrate; system and combined modes are stereo."/>
+    <TextBlock Text="All three modes support WAV and MP3. Select the playback device used by the app whose audio you want to capture. MP3 exports after Stop; retained WAV intermediates provide recovery." Style="{StaticResource MutedText}" FontSize="12" Margin="0,16,0,0"/>
+</StackPanel>
+</UserControl>
+
+

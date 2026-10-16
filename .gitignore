@@ -1,9 +1,19 @@
-# Documentation-only allowlist. Public application source is not authorized.
+# Audited source/documentation allowlist. Local/private artifacts remain excluded.
 *
 !.gitignore
 !.gitattributes
+!LICENSE
 !README.md
+!CaptureFlow.slnx
 !THIRD-PARTY-NOTICES.md
+!src/
+!src/**
+!tests/
+!tests/**
+!tools/
+!tools/**
+!installer/
+!installer/**
 !docs/
 !docs/**
 !assets/
@@ -24,12 +34,20 @@ artifacts/release/docs/*
 !artifacts/release/docs/CaptureFlow-Complete-User-Guide.pdf
 **/bin/
 **/obj/
+**/TestResults/
+**/node_modules/
+**/.vs/
 **/*.db
 **/*.db-wal
 **/*.db-shm
 **/*.log
+**/*.dmp
 **/*.mp4
 **/*.mp3
 **/*.wav
 **/*.cfedit
-.env*
+**/*.pfx
+**/*.p12
+**/*.key
+**/*.pem
+**/.env*

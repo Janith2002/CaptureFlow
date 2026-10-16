@@ -1,0 +1,28 @@
+<UserControl x:Class="CaptureFlow.Desktop.Views.AudioPreferences" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<StackPanel>
+    <TextBlock Text="Audio" Style="{StaticResource Heading}"/>
+    <CheckBox Content="Microphone" IsChecked="{Binding MicrophoneEnabled}" IsEnabled="{Binding CanEditPreferences}" ToolTip="Include microphone audio in the MP4."/>
+    <TextBlock Text="Microphone device" Style="{StaticResource Label}"/>
+    <ComboBox ItemsSource="{Binding Microphones}" SelectedItem="{Binding SelectedMicrophone}" DisplayMemberPath="Name" IsEnabled="{Binding CanEditPreferences}" AutomationProperties.Name="Video recording microphone device"/>
+    <Grid Margin="0,12,0,14"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="64"/><ColumnDefinition Width="90"/></Grid.ColumnDefinitions>
+        <Slider Style="{StaticResource VolumeSlider}" Value="{Binding MicrophoneVolume}" IsEnabled="{Binding MicrophoneEnabled}" AutomationProperties.Name="Microphone volume preference" ToolTip="Changes microphone gain in the saved audio."/>
+        <TextBlock Grid.Column="1" Text="{Binding MicrophoneVolume, StringFormat={}{0:0}%}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <CheckBox Grid.Column="2" Content="Mute" IsChecked="{Binding MicrophoneMuted}" IsEnabled="{Binding MicrophoneEnabled}"/>
+    </Grid>
+    <StackPanel Visibility="{Binding IsScreen, Converter={StaticResource BoolVisibility}}">
+    <Border Height="1" Background="#354057" Margin="0,0,0,16"/>
+    <CheckBox Content="System audio" IsChecked="{Binding SystemAudioEnabled}" IsEnabled="{Binding CanEditPreferences}" ToolTip="Include playback audio from the selected device in the MP4."/>
+    <TextBlock Text="System audio device" Style="{StaticResource Label}"/>
+    <ComboBox ItemsSource="{Binding OutputDevices}" SelectedItem="{Binding SelectedOutputDevice}" DisplayMemberPath="Name" IsEnabled="{Binding CanEditPreferences}" AutomationProperties.Name="Screen recording playback device"/>
+    <Grid Margin="0,12,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="64"/><ColumnDefinition Width="90"/></Grid.ColumnDefinitions>
+        <Slider Style="{StaticResource VolumeSlider}" Value="{Binding SystemAudioVolume}" IsEnabled="{Binding SystemAudioEnabled}" AutomationProperties.Name="System audio volume preference" ToolTip="Changes playback gain in the saved audio."/>
+        <TextBlock Grid.Column="1" Text="{Binding SystemAudioVolume, StringFormat={}{0:0}%}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <CheckBox Grid.Column="2" Content="Mute" IsChecked="{Binding SystemAudioMuted}" IsEnabled="{Binding SystemAudioEnabled}"/>
+    </Grid>
+    </StackPanel>
+    <TextBlock Text="Audio uses the shared recording timeline. Studio meters show real post-gain samples during recording. Combined audio uses mixing headroom." Style="{StaticResource MutedText}" FontSize="12" Margin="0,16,0,0"/>
+</StackPanel>
+</UserControl>
+
+
+

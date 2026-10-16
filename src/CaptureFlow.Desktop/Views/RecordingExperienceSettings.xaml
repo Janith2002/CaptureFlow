@@ -1,0 +1,10 @@
+<UserControl x:Class="CaptureFlow.Desktop.Views.RecordingExperienceSettings" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<StackPanel><TextBlock Text="Recording experience" Style="{StaticResource Heading}"/>
+<TextBlock Text="Countdown before any audio or video recording" Style="{StaticResource Label}"/><ComboBox ItemsSource="{Binding CountdownOptions}" SelectedItem="{Binding SelectedCountdown}" AutomationProperties.Name="Shared recording countdown"/>
+<TextBlock Text="The silent overlay closes before the recording session starts. Cancel from the overlay, toolbar, tray Stop or Ctrl+Alt+R." Style="{StaticResource MutedText}" Margin="0,10,0,16"/>
+<CheckBox Content="Show floating recording toolbar" IsChecked="{Binding ShowToolbar}" Margin="0,0,0,16"/>
+<CheckBox Content="Keep toolbar above ordinary windows" IsChecked="{Binding ToolbarTopmost}" Margin="0,0,0,16"/>
+<TextBlock Text="Toolbar position saves when dragged. Windows capture exclusion is requested, but real-output verification remains necessary. If Windows rejects exclusion, hide the toolbar or move it off the recorded display." Style="{StaticResource MutedText}"/>
+<Button Content="Save countdown and toolbar preferences" Command="{Binding SaveCommand}" HorizontalAlignment="Left" Margin="0,18,0,0"/>
+<TextBlock Text="{Binding Message}" Style="{StaticResource MutedText}" Margin="0,12,0,0"/>
+</StackPanel></UserControl>

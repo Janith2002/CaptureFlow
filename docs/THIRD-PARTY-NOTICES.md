@@ -6,10 +6,10 @@ Dependencies include .NET/WPF, Windows SDK/WinRT components, CommunityToolkit, S
 
 FFmpeg/FFprobe are not bundled by the current installer. FFmpeg licensing depends on build options, including optional GPL components. The locally reviewed external full build is not automatically approved for redistribution. Do not assume external invocation settles all legal questions.
 
-Product publisher identity, application terms/license and redistribution decisions remain owner approvals. Documentation publication does not grant an open-source license or remove third-party rights.
+CaptureFlow's original material is licensed under MIT, approved by the owner in Milestone 78. Third-party licenses, required notices and embedded font terms remain unchanged; MIT does not relicense those components.
 
 See [third-party notice summary](THIRD-PARTY-NOTICES.md), [packaged notice inventory](../THIRD-PARTY-NOTICES.md) and [FFmpeg legal guidance](https://www.ffmpeg.org/legal.html). These distinguish component licensing from the application's unresolved license policy.
 
 See the [complete guide](CaptureFlow-Complete-User-Guide.md).
 
-[Copied license texts and provenance](../Licenses/README.md) accompany this documentation. No application open-source license is implied.
+[Copied license texts and provenance](../Licenses/README.md) accompany this documentation. See [MIT license scope](SOURCE-CODE-POLICY.md); third-party notices are preserved.

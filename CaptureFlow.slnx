@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CaptureFlow.Application/CaptureFlow.Application.csproj" />
+    <Project Path="src/CaptureFlow.Core/CaptureFlow.Core.csproj" />
+    <Project Path="src/CaptureFlow.Desktop/CaptureFlow.Desktop.csproj" />
+    <Project Path="src/CaptureFlow.Infrastructure/CaptureFlow.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CaptureFlow.Tests/CaptureFlow.Tests.csproj" />
+  </Folder>
+</Solution>

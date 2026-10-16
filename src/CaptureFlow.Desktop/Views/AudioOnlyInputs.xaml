@@ -1,0 +1,19 @@
+<UserControl x:Class="CaptureFlow.Desktop.Views.AudioOnlyInputs" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<StackPanel>
+    <TextBlock Text="Input levels &amp; devices" Style="{StaticResource Heading}"/>
+    <StackPanel IsEnabled="{Binding MicrophoneEnabled}">
+        <TextBlock Text="Microphone" FontWeight="SemiBold"/>
+        <ComboBox ItemsSource="{Binding Microphones}" SelectedItem="{Binding SelectedMicrophone}" DisplayMemberPath="Name" IsEnabled="{Binding CanEditPreferences}" Margin="0,8,0,10" AutomationProperties.Name="Audio recorder microphone device" ToolTip="Choose an active Windows microphone."/><Button Content="Refresh audio devices" Command="{Binding RefreshDevicesCommand}" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+        <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="60"/><ColumnDefinition Width="92"/></Grid.ColumnDefinitions><Slider Style="{StaticResource VolumeSlider}" Value="{Binding MicrophoneVolume}" AutomationProperties.Name="Audio recorder microphone volume"/><TextBlock Grid.Column="1" Text="{Binding MicrophoneVolume, StringFormat={}{0:0}%}" VerticalAlignment="Center" HorizontalAlignment="Center"/><CheckBox Grid.Column="2" Content="Mute" IsChecked="{Binding MicrophoneMuted}"/></Grid>
+    </StackPanel>
+    <Border Height="1" Background="#354057" Margin="0,16,0,16"/>
+    <StackPanel IsEnabled="{Binding SystemAudioEnabled}">
+        <TextBlock Text="System audio output" FontWeight="SemiBold"/>
+        <ComboBox ItemsSource="{Binding OutputDevices}" SelectedItem="{Binding SelectedOutputDevice}" DisplayMemberPath="Name" IsEnabled="{Binding CanEditPreferences}" Margin="0,8,0,10" AutomationProperties.Name="Audio recorder system audio output device" ToolTip="Choose the Windows playback device whose audio you want to record."/><Button Content="Refresh audio devices" Command="{Binding RefreshDevicesCommand}" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+        <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="60"/><ColumnDefinition Width="92"/></Grid.ColumnDefinitions><Slider Style="{StaticResource VolumeSlider}" Value="{Binding SystemAudioVolume}" AutomationProperties.Name="Audio recorder system audio volume"/><TextBlock Grid.Column="1" Text="{Binding SystemAudioVolume, StringFormat={}{0:0}%}" VerticalAlignment="Center" HorizontalAlignment="Center"/><CheckBox Grid.Column="2" Content="Mute" IsChecked="{Binding SystemAudioMuted}"/></Grid>
+    </StackPanel>
+    <TextBlock Text="Both volume and mute controls affect the saved audio without changing Windows device volumes. Combined recording uses 6 dB of mixing headroom to prevent clipping." Style="{StaticResource MutedText}" FontSize="12" Margin="0,16,0,0"/>
+</StackPanel>
+</UserControl>
+
+
