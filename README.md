@@ -1,107 +1,99 @@
 <div align="center">
 
-<img src="assets/branding/CaptureFlow-New-Logo.png" width="128" height="128" alt="CaptureFlow purple and cyan S logo">
+<img src="assets/branding/CaptureFlow-New-Logo.png" width="144" height="144" alt="CaptureFlow purple and cyan S logo">
 
 # CaptureFlow
 
 ### Record with clarity. Edit with precision.
 
-A Windows workspace for screen, webcam and audio recording.<br>
-Bring your media onto the timeline. Shape the edit. Review the result.
+Screen, webcam and audio recording. A focused timeline. One Windows workspace.
 
 <p>
-  <img src="https://img.shields.io/badge/Windows_11-x64-0078D4?style=flat-square" alt="Target platform: Windows 11 x64">
-  <img src="https://img.shields.io/badge/.NET-10-512BD4?style=flat-square" alt="Built with .NET 10">
-  <img src="https://img.shields.io/badge/UI-WPF-6655DA?style=flat-square" alt="WPF desktop interface">
-  <img src="https://img.shields.io/badge/Status-beta_preparation-0F8B8D?style=flat-square" alt="Status: beta preparation">
+  <img src="https://img.shields.io/badge/Windows_11-x64-0078D4?style=flat-square" alt="Windows 11 x64">
+  <img src="https://img.shields.io/badge/.NET-10-512BD4?style=flat-square" alt=".NET 10">
+  <img src="https://img.shields.io/badge/UI-WPF-7655CF?style=flat-square" alt="WPF desktop interface">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-089DA8?style=flat-square" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/Status-beta_preparation-7655CF?style=flat-square" alt="Beta preparation">
 </p>
 
-**[Explore](#a-workspace-for-the-whole-workflow) · [Preview](#inside-captureflow) · [Get started](#getting-started) · [User guide](docs/CaptureFlow-Complete-User-Guide.md) · [Contribute](#build-it-together)**
+**[Product preview](#product-preview) · [Features](#from-capture-to-final-cut) · [Get started](#getting-started) · [Documentation](#documentation)**
 
-Open source. Thoughtful Windows design.<br>
-<sub>MIT-licensed original code · third-party components retain their own terms.</sub>
+[Report an issue](https://github.com/Janith2002/CaptureFlow/issues) · [Contribute](docs/CONTRIBUTING.md)
 
 </div>
 
 ---
 
-## A workspace for the whole workflow
+CaptureFlow brings source selection, recording, timeline editing and media export into a desktop application for demonstrations, walkthroughs and narrated content. Built with C# and WPF, it keeps the preview prominent and detailed controls within reach.
 
-CaptureFlow brings recording, editing and export into one Windows desktop application. It is built for people making demonstrations, walkthroughs and narrated content who want a clear recording workspace and a practical timeline without switching tools at every step.
+## Product preview
 
-**Choose a source → shape the timeline → review the preview → export a new file.**
+### Recording Studio
 
-### Inside CaptureFlow
+**Set the scene. Keep the workspace clear.** A large monitor, collapsible Sources and Inspector panels, and independent microphone/system-audio controls.
 
-**Recording Studio** — a spacious monitor, collapsible source controls and an accessible audio mixer.
+<img src="docs/images/recording-studio.png" width="1200" alt="CaptureFlow Recording Studio with a large idle preview, Sources, Inspector and microphone/system-audio mixer">
 
-<img src="docs/images/recording-studio.png" width="1200" alt="Real CaptureFlow Recording Studio QA screenshot: idle screen-only workspace with Sources, Inspector, a large preview and audio mixer">
+### Video Editor
 
-**Video Editor** — rendered preview above a multitrack timeline, with selection and Inspector close at hand.
+**See the edit take shape.** A rendered preview above the timeline, with clip selection, trimming and Inspector properties close at hand.
 
-<img src="docs/images/video-editor.png" width="1200" alt="Real CaptureFlow Video Editor QA screenshot: synthetic color-bar media, two timeline clips and the selected clip's Inspector">
+<img src="docs/images/video-editor.png" width="1200" alt="CaptureFlow Video Editor showing synthetic color-bar media, two timeline clips and the selected clip's Inspector">
 
-<sub>Real M69.2 QA captures, reviewed for privacy. Recording is stopped; the editor uses synthetic media. These earlier workspace views do not demonstrate later webcam-toolbar or export-status repairs, physical recording acceptance, or final visual approval.</sub>
+<sub>Genuine M69.2 QA screenshots: stopped recording workspace and synthetic editor media. They show the workspace design, not acceptance of physical recording or the later toolbar/export-status repairs.</sub>
 
-## Capture your way
+## From capture to final cut
 
-| Video recording | Audio recording |
-|---|---|
-| **Screen Only** — entire screen, application window or custom region | **Microphone Only** — selected input |
-| **Webcam Only** — selected camera | **System Audio Only** — selected output loopback |
-| **Screen + Webcam** — screen with picture-in-picture | **Microphone + System Audio** — combined sources |
+### Screen Recording
 
-These modes are implemented. Physical webcam/PiP recording, playback and A/V synchronization still need documented acceptance. Camera-mode selection or preview can initialize a device; enable it only when intended.
+Choose an entire screen, application window or custom region. Configure resolution, frame rate, quality, countdown and cursor effects; save recording presets for your next session.
 
-## Small details. A complete workflow.
+### Webcam and Picture-in-Picture
 
-| Workspace | What is implemented |
-|---|---|
-| **Recording** | Screen/window/region selection, presets, quality/FPS controls, countdown and cursor effects. |
-| **Webcam & PiP** | Device/format selection, camera preview and overlay layout; mode-aware main-toolbar preview actions. |
-| **Audio** | Microphone and WASAPI loopback, independent levels/mute, WAV and MP3 recording choices. |
-| **Timeline** | Clip dragging, edge trims, splitting, cropping, transforms, text, supported transitions and keyframes. |
-| **Mixing** | Clip/track gain and mute, fades and silence-analysis operations. |
-| **Projects & library** | Project save/load, source references, local library and best-effort recovery/autosave. |
-| **Export** | MP4, MP3 and WAV; retained status, reliable percentage or indeterminate progress, elapsed time, output path and completion/error actions. |
-| **Usability** | Collapsible panels, layout reset, compact controls, global shortcuts and optional tray behavior. |
+Use **Webcam Only** or combine screen and camera in **Screen + Webcam**. Select the device/format, configure the overlay and use mode-aware preview controls. Device readiness and permissions still apply.
 
-Preview is an explicit timeline render played through WPF, not a realtime compositor. Output validation and automated coverage do not replace listening to or viewing the finished file. [Feature details →](docs/FEATURES.md)
+### Microphone and System Audio
 
-## Made for Windows
+Record a microphone, system audio or both through NAudio/WASAPI. Adjust independent levels and mute controls, then choose WAV or MP3 for audio recordings.
 
-**C# / .NET 10 / WPF** form the desktop application. **Windows capture APIs** and **NAudio/WASAPI** handle supported source paths. External **FFmpeg/FFprobe** handle media processing. **SQLite** stores library data; **xUnit** supports regression testing. **Inno Setup** scripts prepare future Windows installers.
+### Timeline Editing
 
-### System architecture
+Drag and trim clips, split at the playhead and crop the source. Shape the edit with transforms, text, supported transitions and keyframes; mix clip/track audio with gain, mute and fades.
+
+### Media Export
+
+Export **MP4, MP3 or WAV** with retained status, elapsed time and output location. Progress shows a percentage when reliable, otherwise an indeterminate indicator; completion and errors remain visible.
+
+### Project Management
+
+Save and reopen projects, browse the local media library and use best-effort autosave/recovery. Projects reference original media; preview renders and exports are separate files.
+
+[Full feature reference →](docs/FEATURES.md)
+
+## Engineered for Windows
+
+- **Desktop:** C# · .NET 10 · WPF · view models and commands.
+- **Capture:** Windows capture APIs · NAudio/WASAPI microphone and loopback audio.
+- **Media and storage:** external FFmpeg/FFprobe · SQLite · local project/recovery files.
+- **Verification and packaging:** xUnit · Inno Setup scripts for future approved installers.
 
 ```mermaid
 flowchart TB
-    User[Windows desktop user] --> Desktop[Desktop: WPF views and view models]
-    Desktop --> Application[Application: workflow coordination]
+    Desktop[Desktop: WPF interface] --> Application[Application: workflows]
     Desktop --> Infrastructure[Infrastructure: platform adapters]
     Application --> Core[Core: models and contracts]
     Infrastructure --> Application
     Infrastructure --> Core
-    Infrastructure --> Windows[Windows capture and audio APIs]
+    Infrastructure --> Capture[Windows capture and audio]
     Infrastructure --> Media[External FFmpeg and FFprobe]
     Infrastructure --> Storage[SQLite and local files]
 ```
 
-Projects reference source media. Preview renders and final exports are separate outputs; recovery retains owned intermediates. [Architecture guide →](docs/ARCHITECTURE.md)
+The editor renders an edited preview for WPF playback; it is not a realtime compositor. [Explore the architecture →](docs/ARCHITECTURE.md)
 
 ## Getting started
 
-### Evaluate the application
-
-**A verified public installer is not available yet.** The historical `0.1.0-preview` setup predates current repairs and is not the current candidate. The proposed next version is **0.2.0-beta.1**, intended as a prerelease.
-
-Follow [GitHub Releases](https://github.com/Janith2002/CaptureFlow/releases) for future approved availability. There is no installer download button here because no current installer is approved.
-
-### Build from source
-
-Clone the source repository, then build on Windows. The proposed beta has no approved public installer yet.
-
-Prerequisites: **Windows 11 x64**, **.NET 10 SDK**, and compatible external **FFmpeg/FFprobe** for media operations. Configure **Settings → External tools → Validate and Save**. Matching `ffprobe.exe` belongs beside `ffmpeg.exe`; documented workflows need libx264, AAC and libmp3lame. Tools are not bundled or automatically downloaded.
+Build on **Windows 11 x64** with the **.NET 10 SDK**:
 
 ```powershell
 git clone https://github.com/Janith2002/CaptureFlow.git
@@ -112,43 +104,38 @@ dotnet test CaptureFlow.slnx --no-build
 dotnet run --project src/CaptureFlow.Desktop/CaptureFlow.Desktop.csproj
 ```
 
-These commands match the solution/project paths; they were not rerun for this documentation update. Save and close a development instance yourself before rebuilding locked outputs. [Installation and requirements →](docs/INSTALLATION.md)
+For media operations, install compatible **FFmpeg and FFprobe** separately. In **Settings → External tools**, select `ffmpeg.exe` and choose **Validate and Save**. Matching `ffprobe.exe` must be beside it; documented workflows require **libx264, AAC and libmp3lame**. Tools are not bundled or automatically downloaded.
 
-## Documentation, at your pace
-
-| Start here | Go deeper |
-|---|---|
-| [Complete user guide](docs/CaptureFlow-Complete-User-Guide.md) | [Architecture](docs/ARCHITECTURE.md) |
-| [Download the PDF manual](artifacts/release/docs/CaptureFlow-Complete-User-Guide.pdf) | [Feature reference](docs/FEATURES.md) |
-| [Installation](docs/INSTALLATION.md) | [Troubleshooting](docs/TROUBLESHOOTING.md) |
-| [Privacy and permissions](docs/PRIVACY.md) | [Known issues](docs/KNOWN-ISSUES.md) |
-| [Change log](docs/CHANGELOG.md) | [Third-party notices](docs/THIRD-PARTY-NOTICES.md) |
+[Installation and system requirements →](docs/INSTALLATION.md)
 
 ## Development status
 
-**Beta preparation, with human verification still in progress.** The last verified development run passed **893 automated tests** with **0 build warnings/errors**. Formal manual QA remains **20 PASS / 26 Not Run**; those cases are not implied to pass by this README.
+**Beta preparation · proposed 0.2.0-beta.1.** A public installer is **not yet approved**. Follow [Releases](https://github.com/Janith2002/CaptureFlow/releases) for future availability.
 
-Physical recording/synchronization, complete export playback evidence, lag/resource retention, signing and clean-machine installation remain open. No production-ready installer or universal device compatibility is claimed. [Current limitations →](docs/KNOWN-ISSUES.md)
+Previously verified: **893 automated tests passed**, build **0 warnings/errors**. Formal manual QA: **20 PASS / 26 Not Run**. No new test run is claimed by this documentation update.
 
-## Privacy belongs in the workflow
+Physical recording/playback, A/V synchronization, final export acceptance, performance/resource retention and clean-machine deployment remain open. [Known issues and verification boundaries →](docs/KNOWN-ISSUES.md)
 
-Recordings, projects, diagnostics and recovery data can contain sensitive information. Preview can access physical devices before recording. Choose sources deliberately, obtain consent and prefer synthetic media for bug reproductions.
+## Documentation
 
-Use [GitHub Issues](https://github.com/Janith2002/CaptureFlow/issues) for non-sensitive reports. Redact credentials, private paths and device identifiers; do not post personal recordings or projects. No private vulnerability-reporting channel is approved, so avoid public disclosure of sensitive exploit details. [Privacy guide →](docs/PRIVACY.md)
+- **Learn the workflow:** [User guide](docs/CaptureFlow-Complete-User-Guide.md) · [PDF manual](artifacts/release/docs/CaptureFlow-Complete-User-Guide.pdf)
+- **Set up and explore:** [Installation](docs/INSTALLATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Features](docs/FEATURES.md)
+- **Find answers:** [Troubleshooting](docs/TROUBLESHOOTING.md) · [Privacy](docs/PRIVACY.md) · [Known issues](docs/KNOWN-ISSUES.md)
+- **Take part:** [Contributing](docs/CONTRIBUTING.md) · [MIT License](LICENSE) · [Third-party notices](docs/THIRD-PARTY-NOTICES.md)
 
-## Build it together
+## Open source, built together
 
-CaptureFlow is open source under the [MIT License](LICENSE). Bug reports, documentation feedback and focused code contributions are welcome. Start with the [contribution guide](docs/CONTRIBUTING.md).
+CaptureFlow's original code and documentation are **[MIT licensed](LICENSE)**. Focused code contributions, documentation improvements and reproducible bug reports are welcome. Third-party components retain their own licenses and notices.
 
-Original CaptureFlow code and documentation use MIT. Third-party licenses and notices remain intact; external tools and embedded font rights are not relicensed. No trademark rights are implied. [License status](docs/SOURCE-CODE-POLICY.md) · [Compatibility review](docs/DEPENDENCY-LICENSE-AUDIT.md)
+Use [GitHub Issues](https://github.com/Janith2002/CaptureFlow/issues) for non-sensitive reports, preferably with synthetic media. Redact credentials, private paths and device identifiers; never upload personal recordings or projects. Preview can initialize a physical device before recording, so enable it deliberately. [Contribution guide](docs/CONTRIBUTING.md) · [Privacy guidance](docs/PRIVACY.md)
 
 ---
 
 <div align="center">
 
-**CaptureFlow**<br>
-Record with clarity. Edit with precision.
+<img src="assets/branding/CaptureFlow-New-Logo.png" width="32" height="32" alt="CaptureFlow logo">
 
-[Guide](docs/CaptureFlow-Complete-User-Guide.md) · [Road to beta](docs/KNOWN-ISSUES.md) · [Feedback](https://github.com/Janith2002/CaptureFlow/issues)
+**CaptureFlow**<br>
+[User guide](docs/CaptureFlow-Complete-User-Guide.md) · [Contribute](docs/CONTRIBUTING.md) · [Feedback](https://github.com/Janith2002/CaptureFlow/issues)
 
 </div>
