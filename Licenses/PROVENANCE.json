@@ -1,0 +1,32 @@
+﻿[
+    {
+        "File":  "NET-runtime-THIRD-PARTY-NOTICES.txt",
+        "PackageSource":  "microsoft.netcore.app.runtime.win-x64/10.0.12/THIRD-PARTY-NOTICES.TXT",
+        "Sha256":  "6D15E10A101C6BFFF2AB4429ED061BF76C456FC4B23AD6B03E0D0F8377148A21"
+    },
+    {
+        "File":  "WindowsDesktop-LICENSE.txt",
+        "PackageSource":  "microsoft.windowsdesktop.app.runtime.win-x64/10.0.12/LICENSE",
+        "Sha256":  "A89886665765362EB77E0F8E26602C924520041D1711B2EEDC136434FE4D01AB"
+    },
+    {
+        "File":  "System-Numerics-Tensors-LICENSE.txt",
+        "PackageSource":  "system.numerics.tensors/9.0.0/LICENSE.TXT",
+        "Sha256":  "D7A68596AB69B06F51CA278A6545148E4269A9381C26D597C13DF5D88E08CF5B"
+    },
+    {
+        "File":  "NET-runtime-LICENSE.txt",
+        "PackageSource":  "microsoft.netcore.app.runtime.win-x64/10.0.12/LICENSE.TXT",
+        "Sha256":  "D7A68596AB69B06F51CA278A6545148E4269A9381C26D597C13DF5D88E08CF5B"
+    },
+    {
+        "File":  "CommunityToolkit-LICENSE.md",
+        "PackageSource":  "communitytoolkit.mvvm/8.4.2/License.md",
+        "Sha256":  "651997EF19DBB9ECB8DD660DBC86444A65AF21F18CFE08DAA69BF201CD5CFDFC"
+    },
+    {
+        "File":  "CommunityToolkit-ThirdPartyNotices.txt",
+        "PackageSource":  "communitytoolkit.mvvm/8.4.2/ThirdPartyNotices.txt",
+        "Sha256":  "7774F8B0AB66BFB47EC154CE24A2D6D574FEBC44A74D940B8A037D1C56756163"
+    }
+]

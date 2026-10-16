@@ -1,0 +1,461 @@
+﻿[
+    {
+        "Id":  "CommunityToolkit.Mvvm",
+        "Version":  "8.4.2",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "(c) .NET Foundation and Contributors. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/CommunityToolkit/dotnet",
+        "RepositoryCommit":  "35dfe7b12da0e64384bfaec7ebc0883196a89f9f"
+    },
+    {
+        "Id":  "Microsoft.Data.Sqlite",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Data.Sqlite.Core",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.Abstractions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.Binder",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.CommandLine",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.EnvironmentVariables",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.FileExtensions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.Json",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Configuration.UserSecrets",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.DependencyInjection",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Diagnostics",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Diagnostics.Abstractions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.FileProviders.Abstractions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.FileProviders.Physical",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.FileSystemGlobbing",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Hosting",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Hosting.Abstractions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging.Abstractions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging.Configuration",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging.Console",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging.Debug",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging.EventLog",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Logging.EventSource",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Options",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Options.ConfigurationExtensions",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "Microsoft.Extensions.Primitives",
+        "Version":  "10.0.12",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/dotnet",
+        "RepositoryCommit":  "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    {
+        "Id":  "NAudio",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath \u0026 Contributors",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.Asio",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.Core",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.Dmo",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.Midi",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.Wasapi",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.WinForms",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "NAudio.WinMM",
+        "Version":  "3.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Mark Heath",
+        "Copyright":  "© Mark Heath 2026",
+        "RepositoryUrl":  "https://github.com/naudio/NAudio",
+        "RepositoryCommit":  "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    {
+        "Id":  "Serilog",
+        "Version":  "4.4.0",
+        "DeclaredLicense":  "Apache-2.0",
+        "Authors":  "Serilog Contributors",
+        "Copyright":  "Copyright © Serilog Contributors",
+        "RepositoryUrl":  "https://github.com/serilog/serilog",
+        "RepositoryCommit":  "497f80fda4f9e8f98b9c13ba34b1f0530f8c4449"
+    },
+    {
+        "Id":  "Serilog.Sinks.File",
+        "Version":  "7.0.0",
+        "DeclaredLicense":  "Apache-2.0",
+        "Authors":  "Serilog Contributors",
+        "Copyright":  null,
+        "RepositoryUrl":  "https://github.com/serilog/serilog-sinks-file",
+        "RepositoryCommit":  "23c732a8658a0df2a5434fe69b0011800b14f0da"
+    },
+    {
+        "Id":  "SharpGen.Runtime",
+        "Version":  "2.4.2-beta",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "jkoritzinsky",
+        "Copyright":  "(c) 2010-2017 Alexandre Mutel, 2017-2023 Jeremy Koritzinsky, 2023-2024 Amer Koleci",
+        "RepositoryUrl":  "https://github.com/SharpGenTools/SharpGenTools",
+        "RepositoryCommit":  "6990bcafe124a4c22515ad19cee5a081da8db67b"
+    },
+    {
+        "Id":  "SharpGen.Runtime.COM",
+        "Version":  "2.4.2-beta",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "jkoritzinsky",
+        "Copyright":  "(c) 2010-2017 Alexandre Mutel, 2017-2023 Jeremy Koritzinsky, 2023-2024 Amer Koleci",
+        "RepositoryUrl":  "https://github.com/SharpGenTools/SharpGenTools",
+        "RepositoryCommit":  "6990bcafe124a4c22515ad19cee5a081da8db67b"
+    },
+    {
+        "Id":  "SQLitePCLRaw.bundle_e_sqlite3",
+        "Version":  "2.1.12",
+        "DeclaredLicense":  "Apache-2.0",
+        "Authors":  "Eric Sink",
+        "Copyright":  "Copyright 2014-2024 SourceGear, LLC",
+        "RepositoryUrl":  "https://github.com/ericsink/SQLitePCL.raw",
+        "RepositoryCommit":  null
+    },
+    {
+        "Id":  "SQLitePCLRaw.core",
+        "Version":  "2.1.12",
+        "DeclaredLicense":  "Apache-2.0",
+        "Authors":  "Eric Sink",
+        "Copyright":  "Copyright 2014-2024 SourceGear, LLC",
+        "RepositoryUrl":  "https://github.com/ericsink/SQLitePCL.raw",
+        "RepositoryCommit":  null
+    },
+    {
+        "Id":  "SQLitePCLRaw.lib.e_sqlite3",
+        "Version":  "2.1.12",
+        "DeclaredLicense":  "Apache-2.0",
+        "Authors":  "Eric Sink",
+        "Copyright":  "Copyright 2014-2024 SourceGear, LLC",
+        "RepositoryUrl":  "https://github.com/ericsink/SQLitePCL.raw",
+        "RepositoryCommit":  null
+    },
+    {
+        "Id":  "SQLitePCLRaw.provider.e_sqlite3",
+        "Version":  "2.1.12",
+        "DeclaredLicense":  "Apache-2.0",
+        "Authors":  "Eric Sink",
+        "Copyright":  "Copyright 2014-2024 SourceGear, LLC",
+        "RepositoryUrl":  "https://github.com/ericsink/SQLitePCL.raw",
+        "RepositoryCommit":  null
+    },
+    {
+        "Id":  "System.Numerics.Tensors",
+        "Version":  "9.0.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Microsoft",
+        "Copyright":  "© Microsoft Corporation. All rights reserved.",
+        "RepositoryUrl":  "https://github.com/dotnet/runtime",
+        "RepositoryCommit":  "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
+    },
+    {
+        "Id":  "Vortice.Direct3D11",
+        "Version":  "3.8.3",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Amer Koleci",
+        "Copyright":  "Copyright (c) Amer Koleci and Contributors",
+        "RepositoryUrl":  "https://github.com/amerkoleci/Vortice.Windows",
+        "RepositoryCommit":  "9e609cb9439c9872aa1b339f177e40ec96f77239"
+    },
+    {
+        "Id":  "Vortice.DirectX",
+        "Version":  "3.8.3",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Amer Koleci",
+        "Copyright":  "Copyright (c) Amer Koleci and Contributors",
+        "RepositoryUrl":  "https://github.com/amerkoleci/Vortice.Windows",
+        "RepositoryCommit":  "9e609cb9439c9872aa1b339f177e40ec96f77239"
+    },
+    {
+        "Id":  "Vortice.DXGI",
+        "Version":  "3.8.3",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Amer Koleci",
+        "Copyright":  "Copyright (c) Amer Koleci and Contributors",
+        "RepositoryUrl":  "https://github.com/amerkoleci/Vortice.Windows",
+        "RepositoryCommit":  "9e609cb9439c9872aa1b339f177e40ec96f77239"
+    },
+    {
+        "Id":  "Vortice.Mathematics",
+        "Version":  "2.1.0",
+        "DeclaredLicense":  "MIT",
+        "Authors":  "Amer Koleci",
+        "Copyright":  "Copyright (c) Amer Koleci and Contributors",
+        "RepositoryUrl":  "https://github.com/amerkoleci/Vortice.Mathematics",
+        "RepositoryCommit":  "fa05ec6dcba48f3f7331791da6dc7f3d866b2ad6"
+    }
+]

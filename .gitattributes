@@ -1,0 +1,5 @@
+# PDF offsets and provenance hashes require byte-preserving checkout.
+*.pdf binary
+*.png binary
+*.ico binary
+Licenses/** -text
