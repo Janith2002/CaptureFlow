@@ -3,7 +3,7 @@
 Clone the source on Windows with Git and the .NET 10 SDK installed:
 
 ```powershell
-git clone https://github.com/Janith2002/CaptureFlow.git
+git clone --branch backup/source-2026-10-19 https://github.com/Janith2002/CaptureFlow.git
 cd CaptureFlow
 dotnet restore CaptureFlow.slnx
 dotnet build CaptureFlow.slnx -c Release
