@@ -39,3 +39,7 @@ dotnet run --project src/CaptureFlow.Desktop/CaptureFlow.Desktop.csproj
 ```
 
 Do not run a build against locked output files; save and close a running development instance yourself if necessary. No physical preview/recording is required to launch or run deterministic tests. See [architecture](ARCHITECTURE.md) and [license status](SOURCE-CODE-POLICY.md).
+
+## Version 1.0.0 validation builds
+
+The requested stable-release target is now 1.0.0. Local validation artifacts are named CaptureFlow-Setup-1.0.0-win-x64.exe and CaptureFlow-Portable-1.0.0-win-x64.zip. They are unsigned and private; the stable release is not approved or published. Required regression, licensing, physical playback and clean-machine acceptance remain incomplete. No download links are advertised until those gates pass. The published guide remains unchanged; a local 1.0.0 validation edition is prepared separately.

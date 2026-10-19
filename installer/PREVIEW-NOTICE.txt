@@ -1,7 +1,9 @@
-CaptureFlow 0.1.0 Preview
+CaptureFlow 1.0.0 - Windows 11 x64
 
-Private pre-release evaluation build. Public release approval is BLOCKED.
-The application and installer are unsigned. Windows may display reputation warnings.
+PRIVATE v1.0.0 validation build. NOT an approved stable release.
+Mandatory public release gates remain incomplete.
+The application and installer are unsigned. Windows may warn or block them.
+Do not disable or bypass security protections.
 
 Close CaptureFlow before installing, upgrading or uninstalling. Setup does not
 force recording sessions to stop or automatically launch recording devices.

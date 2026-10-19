@@ -1,0 +1,767 @@
+[
+  {
+    "package": "Microsoft.NETCore.App.Runtime.win-x64",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.NETCore.App.Runtime.win-x64-LICENSE.TXT",
+      "Distribution/Microsoft.NETCore.App.Runtime.win-x64-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.WindowsDesktop.App.Runtime.win-x64-LICENSE"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Windows.SDK.NET.Ref",
+    "version": "10.0.19041.57",
+    "license": null,
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": null,
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/Windows-SDK-terms.rtf; public redistribution clearance NOT COMPLETE"
+  },
+  {
+    "package": "CommunityToolkit.Mvvm",
+    "version": "8.4.2",
+    "license": "MIT",
+    "copyright": "(c) .NET Foundation and Contributors. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/CommunityToolkit/dotnet",
+      "branch": "refs/heads/rel/8.4.2",
+      "commit": "35dfe7b12da0e64384bfaec7ebc0883196a89f9f"
+    },
+    "suppliedNotices": [
+      "Distribution/CommunityToolkit.Mvvm-License.md",
+      "Distribution/CommunityToolkit.Mvvm-ThirdPartyNotices.txt"
+    ],
+    "additionalNoticeFamily": "CommunityToolkit supplied license/notices"
+  },
+  {
+    "package": "Microsoft.Data.Sqlite",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Data.Sqlite.Core",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.Abstractions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.Abstractions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.Binder",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.Binder-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.CommandLine",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.CommandLine-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.EnvironmentVariables-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.FileExtensions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.FileExtensions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.Json",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.Json-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.UserSecrets",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Configuration.UserSecrets-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.DependencyInjection",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.DependencyInjection-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.DependencyInjection.Abstractions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Diagnostics",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Diagnostics-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Diagnostics.Abstractions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Diagnostics.Abstractions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.FileProviders.Abstractions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.FileProviders.Abstractions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.FileProviders.Physical",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.FileProviders.Physical-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.FileSystemGlobbing",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.FileSystemGlobbing-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Hosting",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Hosting-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Hosting.Abstractions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Hosting.Abstractions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Abstractions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging.Abstractions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Configuration",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging.Configuration-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Console",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging.Console-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Debug",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging.Debug-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.EventLog",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging.EventLog-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.EventSource",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Logging.EventSource-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Options",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Options-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Options.ConfigurationExtensions",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Options.ConfigurationExtensions-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Microsoft.Extensions.Primitives",
+    "version": "10.0.12",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/dotnet",
+      "commit": "95017c711e6afc1085133d440e42b4bd78155701"
+    },
+    "suppliedNotices": [
+      "Distribution/Microsoft.Extensions.Primitives-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "NAudio",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.Asio",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.Core",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.Dmo",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.Midi",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.Wasapi",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.WinForms",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "NAudio.WinMM",
+    "version": "3.1.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Mark Heath 2026",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naudio/NAudio",
+      "commit": "0aaef29d04bec9567bdf2f669036fabecc33a2e2"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/NAudio-LICENSE.txt"
+  },
+  {
+    "package": "Serilog",
+    "version": "4.4.0",
+    "license": "Apache-2.0",
+    "copyright": "Copyright \u00a9 Serilog Contributors",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/serilog/serilog",
+      "branch": "refs/heads/main",
+      "commit": "497f80fda4f9e8f98b9c13ba34b1f0530f8c4449"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/serilog-LICENSE.txt"
+  },
+  {
+    "package": "Serilog.Sinks.File",
+    "version": "7.0.0",
+    "license": "Apache-2.0",
+    "copyright": null,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/serilog/serilog-sinks-file",
+      "branch": "refs/heads/main",
+      "commit": "23c732a8658a0df2a5434fe69b0011800b14f0da"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/serilog-sinks-file-LICENSE.txt"
+  },
+  {
+    "package": "SharpGen.Runtime",
+    "version": "2.4.2-beta",
+    "license": "MIT",
+    "copyright": "(c) 2010-2017 Alexandre Mutel, 2017-2023 Jeremy Koritzinsky, 2023-2024 Amer Koleci",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/SharpGenTools/SharpGenTools",
+      "branch": "refs/heads/main",
+      "commit": "6990bcafe124a4c22515ad19cee5a081da8db67b"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/SharpGenTools-LICENSE_txt.txt"
+  },
+  {
+    "package": "SharpGen.Runtime.COM",
+    "version": "2.4.2-beta",
+    "license": "MIT",
+    "copyright": "(c) 2010-2017 Alexandre Mutel, 2017-2023 Jeremy Koritzinsky, 2023-2024 Amer Koleci",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/SharpGenTools/SharpGenTools",
+      "branch": "refs/heads/main",
+      "commit": "6990bcafe124a4c22515ad19cee5a081da8db67b"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/SharpGenTools-LICENSE_txt.txt"
+  },
+  {
+    "package": "SQLitePCLRaw.bundle_e_sqlite3",
+    "version": "2.1.12",
+    "license": "Apache-2.0",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ericsink/SQLitePCL.raw"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/SQLitePCLRaw-LICENSE.TXT and NOTICE.TXT; native SQLite public-domain notice"
+  },
+  {
+    "package": "SQLitePCLRaw.core",
+    "version": "2.1.12",
+    "license": "Apache-2.0",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ericsink/SQLitePCL.raw"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/SQLitePCLRaw-LICENSE.TXT and NOTICE.TXT; native SQLite public-domain notice"
+  },
+  {
+    "package": "SQLitePCLRaw.lib.e_sqlite3",
+    "version": "2.1.12",
+    "license": "Apache-2.0",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ericsink/SQLitePCL.raw"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/SQLitePCLRaw-LICENSE.TXT and NOTICE.TXT; native SQLite public-domain notice"
+  },
+  {
+    "package": "SQLitePCLRaw.provider.e_sqlite3",
+    "version": "2.1.12",
+    "license": "Apache-2.0",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ericsink/SQLitePCL.raw"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/SQLitePCLRaw-LICENSE.TXT and NOTICE.TXT; native SQLite public-domain notice"
+  },
+  {
+    "package": "System.Numerics.Tensors",
+    "version": "9.0.0",
+    "license": "MIT",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/runtime",
+      "commit": "9d5a6a9aa463d6d10b0b0ba6d5982cc82f363dc3"
+    },
+    "suppliedNotices": [
+      "Distribution/System.Numerics.Tensors-LICENSE.TXT",
+      "Distribution/System.Numerics.Tensors-THIRD-PARTY-NOTICES.TXT"
+    ],
+    "additionalNoticeFamily": "Microsoft runtime/package license and third-party notices"
+  },
+  {
+    "package": "Vortice.Direct3D11",
+    "version": "3.8.3",
+    "license": "MIT",
+    "copyright": "Copyright (c) Amer Koleci and Contributors",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/amerkoleci/Vortice.Windows",
+      "commit": "9e609cb9439c9872aa1b339f177e40ec96f77239"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/Vortice.Windows-LICENSE.txt"
+  },
+  {
+    "package": "Vortice.DirectX",
+    "version": "3.8.3",
+    "license": "MIT",
+    "copyright": "Copyright (c) Amer Koleci and Contributors",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/amerkoleci/Vortice.Windows",
+      "commit": "9e609cb9439c9872aa1b339f177e40ec96f77239"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/Vortice.Windows-LICENSE.txt"
+  },
+  {
+    "package": "Vortice.DXGI",
+    "version": "3.8.3",
+    "license": "MIT",
+    "copyright": "Copyright (c) Amer Koleci and Contributors",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/amerkoleci/Vortice.Windows",
+      "commit": "9e609cb9439c9872aa1b339f177e40ec96f77239"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/Vortice.Windows-LICENSE.txt"
+  },
+  {
+    "package": "Vortice.Mathematics",
+    "version": "2.1.0",
+    "license": "MIT",
+    "copyright": "Copyright (c) Amer Koleci and Contributors",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/amerkoleci/Vortice.Mathematics",
+      "branch": "refs/heads/main",
+      "commit": "fa05ec6dcba48f3f7331791da6dc7f3d866b2ad6"
+    },
+    "suppliedNotices": [],
+    "additionalNoticeFamily": "Distribution/Vortice.Mathematics-LICENSE.txt"
+  }
+]

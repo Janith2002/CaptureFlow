@@ -1,0 +1,260 @@
+[
+  {
+    "file": "Distribution/dotnet-ThirdPartyNotices_txt.txt",
+    "source": "https://raw.githubusercontent.com/CommunityToolkit/dotnet/35dfe7b12da0e64384bfaec7ebc0883196a89f9f/ThirdPartyNotices.txt",
+    "sha256": "79498b27081bbec29c504798c727761e0898963259fb7421ea587a758e803ed3"
+  },
+  {
+    "file": "Distribution/NAudio-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/naudio/NAudio/0aaef29d04bec9567bdf2f669036fabecc33a2e2/LICENSE",
+    "sha256": "e518e168af44d37da3de236e719c986169e47b46b90e37c1355056175744e037"
+  },
+  {
+    "file": "Distribution/serilog-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/serilog/serilog/497f80fda4f9e8f98b9c13ba34b1f0530f8c4449/LICENSE",
+    "sha256": "73ba74dfaa520b49a401b5d21459a8523a146f3b7518a833eea5efa85130bf68"
+  },
+  {
+    "file": "Distribution/serilog-sinks-file-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/serilog/serilog-sinks-file/23c732a8658a0df2a5434fe69b0011800b14f0da/LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  {
+    "file": "Distribution/SharpGenTools-LICENSE_txt.txt",
+    "source": "https://raw.githubusercontent.com/SharpGenTools/SharpGenTools/6990bcafe124a4c22515ad19cee5a081da8db67b/LICENSE.txt",
+    "sha256": "1cc7abd1e97575838535484bef6e4ab14e81681ddf7837672acede5fca1d4e30"
+  },
+  {
+    "file": "Distribution/Vortice.Windows-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/amerkoleci/Vortice.Windows/9e609cb9439c9872aa1b339f177e40ec96f77239/LICENSE",
+    "sha256": "82bd4e84d144bebbb519ed05899f0ceaeaf2e0f95160ac32fd8cc388710c76d0"
+  },
+  {
+    "file": "Distribution/Vortice.Mathematics-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/amerkoleci/Vortice.Mathematics/fa05ec6dcba48f3f7331791da6dc7f3d866b2ad6/LICENSE",
+    "sha256": "cf72351fa2e9f2eb181af7fd508dd73da1d84ba43575cb98f7af22f26a81af5e"
+  },
+  {
+    "file": "Distribution/SQLitePCLRaw-LICENSE.TXT",
+    "source": "https://raw.githubusercontent.com/ericsink/SQLitePCL.raw/ca835d21508bff43121c65081035840ac5006c4c/LICENSE.TXT",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "Distribution/SQLitePCLRaw-NOTICE.TXT",
+    "source": "https://raw.githubusercontent.com/ericsink/SQLitePCL.raw/ca835d21508bff43121c65081035840ac5006c4c/NOTICE.TXT",
+    "sha256": "485b276b3d2bfaa26df348e1e5c84df3648981e09b88531a6a53006f0705c24b"
+  },
+  {
+    "file": "Distribution/SQLite-public-domain.html",
+    "source": "https://www.sqlite.org/copyright.html",
+    "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70"
+  },
+  {
+    "file": "Distribution/Microsoft.NETCore.App.Runtime.win-x64-LICENSE.TXT",
+    "source": "nuget:Microsoft.NETCore.App.Runtime.win-x64/10.0.12/LICENSE.TXT",
+    "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b"
+  },
+  {
+    "file": "Distribution/Microsoft.NETCore.App.Runtime.win-x64-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.NETCore.App.Runtime.win-x64/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.WindowsDesktop.App.Runtime.win-x64-LICENSE",
+    "source": "nuget:Microsoft.WindowsDesktop.App.Runtime.win-x64/10.0.12/LICENSE",
+    "sha256": "a89886665765362eb77e0f8e26602c924520041d1711b2eedc136434fe4d01ab"
+  },
+  {
+    "file": "Distribution/CommunityToolkit.Mvvm-License.md",
+    "source": "nuget:CommunityToolkit.Mvvm/8.4.2/License.md",
+    "sha256": "651997ef19dbb9ecb8dd660dbc86444a65af21f18cfe08daa69bf201cd5cfdfc"
+  },
+  {
+    "file": "Distribution/CommunityToolkit.Mvvm-ThirdPartyNotices.txt",
+    "source": "nuget:CommunityToolkit.Mvvm/8.4.2/ThirdPartyNotices.txt",
+    "sha256": "7774f8b0ab66bfb47ec154ce24a2d6d574febc44a74d940b8a037d1c56756163"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.Abstractions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.Abstractions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.Binder-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.Binder/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.CommandLine-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.CommandLine/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.EnvironmentVariables-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.EnvironmentVariables/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.FileExtensions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.FileExtensions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.Json-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.Json/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Configuration.UserSecrets-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Configuration.UserSecrets/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.DependencyInjection-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.DependencyInjection/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.DependencyInjection.Abstractions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.DependencyInjection.Abstractions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Diagnostics-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Diagnostics/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Diagnostics.Abstractions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Diagnostics.Abstractions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.FileProviders.Abstractions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.FileProviders.Abstractions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.FileProviders.Physical-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.FileProviders.Physical/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.FileSystemGlobbing-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.FileSystemGlobbing/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Hosting-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Hosting/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Hosting.Abstractions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Hosting.Abstractions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging.Abstractions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging.Abstractions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging.Configuration-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging.Configuration/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging.Console-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging.Console/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging.Debug-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging.Debug/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging.EventLog-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging.EventLog/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Logging.EventSource-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Logging.EventSource/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Options-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Options/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Options.ConfigurationExtensions-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Options.ConfigurationExtensions/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/Microsoft.Extensions.Primitives-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:Microsoft.Extensions.Primitives/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "Distribution/System.Numerics.Tensors-LICENSE.TXT",
+    "source": "nuget:System.Numerics.Tensors/9.0.0/LICENSE.TXT",
+    "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b"
+  },
+  {
+    "file": "Distribution/System.Numerics.Tensors-THIRD-PARTY-NOTICES.TXT",
+    "source": "nuget:System.Numerics.Tensors/9.0.0/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5"
+  },
+  {
+    "file": "Distribution/Windows-SDK-terms.rtf",
+    "source": "https://aka.ms/WinSDKLicenseURL",
+    "sha256": "dd07eb178e00c6bba4148457fc00ff77cd4887eb521d504186fe59c9ec8bbe62",
+    "scope": "SDK targeting pack terms; public redistribution clearance pending"
+  },
+  {
+    "file": "Distribution/CsWinRT-2.2.0-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/microsoft/CsWinRT/8649ee3eeb2445ca2a36d80d878ef60b96a6c65d/LICENSE",
+    "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b"
+  },
+  {
+    "file": "Distribution/DotNet-Windows-License-Mapping.md",
+    "source": "https://raw.githubusercontent.com/dotnet/core/6c25b9da384e8d8a16fd12c79da8a8aa6bdfc6a1/license-information-windows.md",
+    "sha256": "3bdf7142d570f11780d1a5fcb6cbe47f5cf4a15bc634acf8db93fe3be8837119"
+  },
+  {
+    "file": "Distribution/DotNet-Library-LICENSE.html",
+    "source": "https://dotnet.microsoft.com/en-us/dotnet_library_license.htm",
+    "sha256": "0f69be2c8ac44c3980047664c3347ff22cba5842dc9d8b0a88a4f0914645a780"
+  },
+  {
+    "file": "Distribution/DotNet-Library-LICENSE.txt",
+    "source": "https://dotnet.microsoft.com/en-us/dotnet_library_license.htm",
+    "sha256": "6af30f05b3b616bbbd4f4ddf65256a152287d8d6fbd220ea27c399cfb4210114",
+    "transformation": "Plain-text extraction; original HTML also retained"
+  },
+  {
+    "file": "Distribution/Windows-SDK-terms.txt",
+    "source": "https://aka.ms/WinSDKLicenseURL",
+    "sha256": "d7385a8a3724ade77be7a9632be827c01dad8ccc674f06165ce8609267542d36",
+    "transformation": "Text extracted from original included RTF; source RTF retained"
+  },
+  {
+    "file": "Distribution/Inno-Setup-LICENSE.txt",
+    "source": "Inno Setup 6.7.3 signed compiler distribution; https://jrsoftware.org/files/is/license.txt",
+    "sha256": "2e5346868c2a18434489824e11d65c3031620f792fefc415d05f19cd441abf5c"
+  }
+]

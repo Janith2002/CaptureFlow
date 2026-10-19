@@ -51,3 +51,13 @@ artifacts/release/docs/*
 **/*.key
 **/*.pem
 **/.env*
+
+!Directory.Build.props
+!THIRD-PARTY-NOTICES.txt
+!MILESTONE-83-LICENSING-CLEARANCE.md
+!MILESTONE-84-FINAL-REDISTRIBUTION-REVIEW.md
+!V1-PUBLICATION-LICENSING-RECHECK.md
+**/*.user
+**/*.suo
+**/appsettings.Local.json
+**/secrets.json

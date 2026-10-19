@@ -3,10 +3,10 @@
   #define PublishDir "..\artifacts\installer\publish"
 #endif
 #ifndef PackageVersion
-  #define PackageVersion "0.1.0-preview"
+  #define PackageVersion "1.0.0"
 #endif
 #ifndef NumericVersion
-  #define NumericVersion "0.1.0.0"
+  #define NumericVersion "1.0.0.0"
 #endif
 #ifndef OutputDir
   #define OutputDir "..\artifacts\installer\output"
@@ -25,7 +25,9 @@ AppVersion={#PackageVersion}
 AppVerName={#ProductName} {#PackageVersion}
 VersionInfoVersion={#NumericVersion}
 VersionInfoProductName=CaptureFlow
-VersionInfoDescription=CaptureFlow Preview Setup
+VersionInfoDescription=CaptureFlow Windows Setup
+AppPublisher=Janith Akalanka
+VersionInfoCompany=Janith Akalanka
 DefaultDirName={localappdata}\Programs\{#ProductName}
 DefaultGroupName={#ProductName}
 PrivilegesRequired=lowest
@@ -33,9 +35,9 @@ ArchitecturesAllowed=x64compatible and not arm64
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0.22000
 OutputDir={#OutputDir}
-OutputBaseFilename=CaptureFlow-Setup-{#PackageVersion}
+OutputBaseFilename=CaptureFlow-Setup-{#PackageVersion}-win-x64
 SetupIconFile=..\assets\branding\CaptureFlow-New-Icon.ico
-UninstallDisplayIcon={app}\CaptureFlow.Desktop.exe
+UninstallDisplayIcon={app}\CaptureFlow.exe
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -46,6 +48,9 @@ UsePreviousAppDir=yes
 UsePreviousTasks=yes
 DisableProgramGroupPage=yes
 InfoBeforeFile=PREVIEW-NOTICE.txt
+LicenseFile=..\LICENSE
+DisableWelcomePage=no
+DisableFinishedPage=no
 Uninstallable=yes
 
 [Tasks]
@@ -56,8 +61,8 @@ Source: "{#PublishDir}\*"; DestDir: "{app}"; Excludes: "ffmpeg.exe,ffprobe.exe,*
 Source: "PREVIEW-NOTICE.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{userprograms}\{#ProductName}\{#ProductName}"; Filename: "{app}\CaptureFlow.Desktop.exe"; WorkingDir: "{app}"
-Name: "{userdesktop}\{#ProductName}"; Filename: "{app}\CaptureFlow.Desktop.exe"; WorkingDir: "{app}"; Tasks: desktopicon
+Name: "{userprograms}\{#ProductName}\{#ProductName}"; Filename: "{app}\CaptureFlow.exe"; WorkingDir: "{app}"
+Name: "{userdesktop}\{#ProductName}"; Filename: "{app}\CaptureFlow.exe"; WorkingDir: "{app}"; Tasks: desktopicon
 
 ; No automatic launch, forced app shutdown, user-data deletion, or external downloads.
 ; Inno's tracked-file uninstaller removes installed binaries/shortcuts only.

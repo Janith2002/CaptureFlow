@@ -61,3 +61,9 @@ Milestone 63 adds `Licenses/`: unmodified .NET 10.0.12 runtime license and full 
 FFmpeg and ffprobe are external tools and are NOT bundled. Local verification used Gyan 9.0.2-full_build-www.gyan.dev, with GPL and version3 enabled. Its corresponding source, third-party library notices and redistribution obligations have not been fully verified. No redistribution approval is claimed.
 
 Sources: https://ffmpeg.org/legal.html and https://www.gyan.dev/ffmpeg/builds/. Executable hashes and configure output: artifacts/qa/release-ffmpeg-audit.json and release-ffmpeg-buildconf.txt.
+
+## Milestone 81 private candidate notice supplement
+
+Licenses/Distribution contains unmodified exact-version runtime/package notices and immutable upstream license texts for NAudio, Serilog, SharpGen, Vortice and SQLitePCLRaw. DISTRIBUTION-PACKAGES.json maps all 54 runtime/package records from the candidate dependency manifest; DISTRIBUTION-PROVENANCE.json records source URLs/package paths and hashes. SQLitePCLRaw NOTICE and native SQLite public-domain terms are retained. CaptureFlow original material remains under LICENSE; third-party terms are not replaced.
+
+Windows SDK .NET Ref 10.0.19041.57 declares separate SDK license terms, not a generic MIT license. Those terms are included; public redistribution scope and end-user terms for its runtime projection files remain a specific acceptance blocker. These packages are PRIVATE internal test candidates. No blanket binary-distribution clearance is claimed. FFmpeg/FFprobe remain external and excluded.

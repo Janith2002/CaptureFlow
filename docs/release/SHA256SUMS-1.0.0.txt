@@ -1,0 +1,2 @@
+b1e0af97b5075d80cba0e664fd1d420f94ddf266bf38a649f5b818f204079e1c  CaptureFlow-Setup-1.0.0-win-x64.exe
+4740267efe5e6f7e4c72113e9e483dc83833f9a07e2a7e52cd7ec8596c79fe96  CaptureFlow-Portable-1.0.0-win-x64.zip

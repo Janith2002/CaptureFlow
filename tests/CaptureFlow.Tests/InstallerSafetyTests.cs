@@ -27,7 +27,10 @@ public class InstallerSafetyTests
         Assert.Contains("Uninstallable=yes", script);
         Assert.Contains("SetupMutex=", script);
         Assert.Contains("UsePreviousAppDir=yes", script);
-        Assert.DoesNotContain("AppPublisher=", script);
+        Assert.Contains("AppPublisher=Janith Akalanka", script);
+        Assert.Contains("LicenseFile=..\\LICENSE", script);
+        Assert.Contains("CaptureFlow.exe", script);
+        Assert.Contains("OutputBaseFilename=CaptureFlow-Setup-{#PackageVersion}-win-x64", script);
         Assert.Contains("assets\\branding\\CaptureFlow-New-Icon.ico", script);
         var build = Read("Build-Installer.ps1");
         Assert.Contains("--self-contained true", build);

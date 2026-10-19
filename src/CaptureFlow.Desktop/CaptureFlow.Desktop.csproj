@@ -32,5 +32,7 @@
   <ItemGroup><Resource Include="..\..\assets\branding\CaptureFlow-New-Icon.ico" Link="Assets\Branding\CaptureFlow-New-Icon.ico"/><Resource Include="..\..\assets\branding\CaptureFlow-New-Logo.png" Link="Assets\Branding\CaptureFlow-New-Logo.png"/></ItemGroup>
   <ItemGroup><Content Include="..\..\THIRD-PARTY-NOTICES.md" Link="THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
   <ItemGroup><Content Include="..\..\Licenses\**\*" Link="Licenses\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
+  <ItemGroup><Content Include="..\..\LICENSE" Link="LICENSE" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
+  <ItemGroup><Content Include="..\..\THIRD-PARTY-NOTICES.txt" Link="THIRD-PARTY-NOTICES.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
 </Project>
 
